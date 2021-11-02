@@ -1,0 +1,36 @@
+
+note class'i olusturmak:
+notes klasorunu koymak istedigin package'e sag click yaptin olutrdun ama eger olusmadiysa
+olusturdugun ama duzgun calismayan note class'ina sag tikla sonra override file type tikla sonra textmate'i sec bu kadar
+
+Selenium :
+    -Basically a collection of jar files..//bu jar file'larini internette maven sayfasinda //dependicies secerken gorusun
+    -The jar files have classes
+    -Those classes have ready method
+    -We use those jar files to do action on the browsers.
+
+Maven :
+    -Maven is a built automation tool
+    -Help us to create  projects
+    -It is giving us ready pom.xml file
+
+Pom.xml
+    -It helps us manage and add dependicies under project
+
+-To be able to do any action on web element  we need to locate that web element with selenium Webdriver.
+-We are going to use findElement(By.locater)
+findElement(By.locater)
+    -this method will return a single webelement
+    -return type is webelement
+    -it is going to trow NosuchElementExeption if it cant find it.
+
+Locater
+-We have 8 locaters in selenium
+1.name
+2.classname
+3.id
+4.linktext
+5.partiallinktext
+6.tagname
+7.xpath
+8.css

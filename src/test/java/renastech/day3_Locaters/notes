@@ -1,0 +1,110 @@
+
+
+//        driver.findElement(By.className("gLFyf gsfi")).sendKeys("Apple");
+        //if classname has space in it it is not good idea to use most of the case you will recive an error.
+//        driver.findElement(By.className("gLFyf")).sendKeys("Apple");
+        //you can remove after space and try to locate if classname is unique
+
+
+ // if webelement also has classname attribute but it is not unique so it is not good idea to use.
+// if id is dynamic means (when you refresh page and if you see id is changing that means is dynamic) it wont be usefull.
+
+
+
+6-tagNAme
+--you locate using tagname itself
+--the usage of this one not too much
+--it is good if you want to print same tag names
+
+for ex : if you wanna print all links in the page then you will use this method
+driver.findElements(By.tagName(a))
+driver.findElements(By.tagName(div))
+
+Utilities Pakage
+The reason of using utilities:
+ 1.to make our code more reusable
+ 2.easy to maintance
+ (in the future if you wanna change something instead of going each class
+  you will only change from utilities)
+
+ 7-cssSelector
+ it has own syntax
+ common methods that you can use for css
+
+ 1- tagname[attribute='value']
+ 2- tagname.value -->      (.) means is className in css
+
+ 3-tagname#value --> (#) means is id in css
+
+ --you can also go from parent to child
+ div[class='er4g'] > a
+
+
+ 8-xpath
+ 2 type xpath : Absulate and Relative
+
+        1-Absuluate Xpath  ///bunu kullanma  cunku kullanimi kolay ama kullanisli degil cunku developer yeni div falan eklediginde code degisecek
+        -start with /
+        -you need to start top parent (begning of html code)
+        -it is not usefull becasuse it takes from very top from to child
+
+        html
+            head
+            body
+                div
+                div
+                    div
+                        a
+                    div
+                div
+                div
+            body
+            head
+        html
+
+        for ex : /html/body/div/div/a
+                 /html/body/div
+
+        if you have siblings you can use [number]. it will pick the siblings for you
+                         /html/body/div[2]
+
+2-relative xpath
+-- starts with //
+-- double // allows you to locate your webelemt from anyehere in html code.
+--more usefull wehn we compare for absulate xpath because you can start anywhere in html code
+
+
+some syntax of using relative xpath
+
+1-//tagname[@attribute='value']-- looks for tagname attribute and value
+2-//tagname[contains(@attribute, 'value') --locate webelemnt  with the given value if contains
+dynamic id usually has static part and dynamic part
+exp:
+id = hello123
+refresh page
+id = hello578
+refresh page
+id = hello23423
+//tagname[contains(@id, 'hello')
+
+3-//tagname[.='text'] --looks for exact text match for any attribute
+
+ex :
+
+        <div class="est">
+            <a class "def" href="www.gooogle.com">
+         div
+
+         tagname div
+         attribute class
+         attribute value est
+
+//a[@class='def']
+
+
+Next Topics
+Review Locaters
+Css
+Xpath
+find elements
+Checkbox
