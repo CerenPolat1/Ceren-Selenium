@@ -8,7 +8,7 @@ import renastech.utilities.WebDriverUtil;
 public class c6_relativeXpath {
 
     //1-//tagname[@attribute='value']-- looks for tagname attribute and value
-    // 2-//tagname[contains(@attribute, 'value') --locate webelemnt  with the given value if contains
+    // 2-//tagname[contains(@attribute, 'value')] --locate webelemnt  with the given value if contains
     //3-//tagname[.='text'] --looks for exact text match for any attribute
 
     public static void main(String[] args) {
@@ -38,7 +38,17 @@ public class c6_relativeXpath {
             System.out.println("seleniumheader1 = " + seleniumheader1);
         }
 
-
-
     }
 }
+
+//Locater approaches:
+
+//--first option will be id because it is unique (but we will also need to make sure if it is static not dynamic
+//--second option can be name, class name, linktext if they are unique (usually name and classname are not unique.
+//--then, i perefer xpath
+
+//  Differencec between Css and Xpath
+//--Xpath has custom methods but css doesnt have those
+//--Xpath has ability to go from child to parent and parent to child
+//--but in Css, you can only go from parent to child
+//--Css works little faster than Xpath.

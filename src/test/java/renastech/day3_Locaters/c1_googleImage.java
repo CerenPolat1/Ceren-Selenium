@@ -44,7 +44,7 @@ public class c1_googleImage {
     }
 }
 
-//interview question: what will your first chose locate your webelement?  //if it is not dynamic, my answer is ID
+//interview question: what will your first choise locate your webelement?  //if it is not dynamic, my answer is ID
 //eger html'deki id varsa onu kullan cunku o genelde unique baska seferde sana sorun yaratmaz ve kodun duzgunce calisir
 //ama eger unique yoksa baska seylere yonel.
 //eger id yoksa xpath ve css kullanilir

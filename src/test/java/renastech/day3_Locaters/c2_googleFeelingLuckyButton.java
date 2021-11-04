@@ -22,14 +22,15 @@ public class c2_googleFeelingLuckyButton {
         //driver.findElement(By.name("q")).sendKeys("Apple");   works
 
         //driver.findElement(By.className("gLFyf gsfi")).sendKeys("Apple");
-        //having spaces in classname will make your code fail,, exception verir, o yuzden space olanlari kullanma
+
+        ///****having spaces in classname will make your code fail,, exception verir, o yuzden space olanlari kullanma
         //you can remove one part see if it is unique you can locate
-        //notes kisminda v ar detaylar
+        //notes kisminda var detaylar
 
         driver.findElement(By.className("gLFyf")).sendKeys("Apple");// spaceden sonrasini cikardik
         //tekrar html'den baktik ve classname olarak bi tek bu var o zaman kullandik
         //bundan "gLFyf" baska classname olmadigindan unique, baska seylerde "gLFyf" bu kullanilmis
-        //biixm kcin onemli olan classname'in 2.bir "gLFyf" olmamasi
+        //bizim icin onemli olan classname'in 2.bir "gLFyf" olmamasi
         Thread.sleep(1000);
 
         //click i am feeling lucky button

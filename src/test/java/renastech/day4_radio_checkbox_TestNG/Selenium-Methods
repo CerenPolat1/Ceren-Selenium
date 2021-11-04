@@ -1,0 +1,46 @@
+
+findElements() method
+•This method is used to find more than one webElement
+•Return type:List <WebElement>
+•If it cannot find a webElement:
+•Does NOT throw exception.  (Findelement will give you exception (NoSuchElement) if there is no element
+•Only returns an empty list.
+
+How do we go from parent to child using xpath?
+   -->ex: Locating anchor tag by its parent using xpath.
+
+   //div[@id='hello'] --> this is locating the div
+   //div[@id='hello']/a --> this is now locating the anchor tag (sabitleme imi)  using its parent
+
+How do we go from CHILD TO PARENT using xpath?
+   - When we want to go from child to parent:  pass this one  /.. at the end
+   //a[@class='ghju']/..  this will locate the parent of a tag
+    //xpath has abilty to go from child to parent
+    //to be able to go from child to parrent you will need to use /..
+
+" Selenium Methods":
+-getTitle()
+-navigate()
+-getText()
+-sendKeys()
+-getCurrentUrl()
+-getAttribute()
+-getPageSource()
+-getClass()
+-findElement(By, by)
+-click()
+-findElements(By, by)
+-isEnabled()
+-close() and quit()"
+-isDisplayed()
+isSelected()
+
+Impilicit wait (dahili bekleme)
+--An impilict wait is tell webdriver to pool the html code for a certain amount of time
+when you trying to findelement
+--if page is loaded imedillty it wont wait up to given second.
+--type of selenium waits
+
+diyelim ki sen 10 saniye implicit wait girdin ama kod 15 saniye bekledi? ne olacak?
+it will wait until 10 second but your page if it is still not loaded you will have exception
+it is not gonna wait 15 second bec. you specifed only 10 sec. after 10 sec. it will give you exception

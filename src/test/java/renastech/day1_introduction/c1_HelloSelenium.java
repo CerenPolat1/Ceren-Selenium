@@ -58,7 +58,7 @@ pom.xml file, maven'in icindedir, maven olmazsa pom da olmaz
 what kinda tool is in the selenium?
 java and maven
 what is maven?
-maven is a building, you just install your framework and you can use it
+maven is a build, you just install your framework and you can use it
 
 selnium-java is also important and it is also dependency
 

@@ -3,7 +3,7 @@ package renastech.day3_Locaters;
 public class creating_github {
 }
 /*
-kendi lokalinle kendi githubini yuklemek icin
+kendi lokalini kendi githubina yuklemek icin
 ilk olarak repository olusturuyoruz. githubtan.
 sonraki adim:
 lokaline:
@@ -13,7 +13,7 @@ git branch -M main
 git remote add origin .....(url)
 git push -u origin main
 
-baskasinin projesini kendi localine eklemek icin ise:
+baskasinin projesini kendi localine eklemek ve branch oluturmak icin ise:
 
 1- sana davet istegi geliyor, bunu kabul ettikten sonra sen de o projenin bir parcasi oluyorsun
 2-simdi yapman gereken projeye gelip proje url'sini clone etmek

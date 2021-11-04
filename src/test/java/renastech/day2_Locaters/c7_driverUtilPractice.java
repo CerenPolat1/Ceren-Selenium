@@ -18,7 +18,8 @@ public class c7_driverUtilPractice {
 //        driver.get("https://www.google.com");
 //        driver.close();
 
-        WebDriver driver2=WebDriverUtil.getDriver("chrome");
+        WebDriver driver2=WebDriverUtil.getDriver("chrome"); //webdriverutil ile classi cagirdik,
+                                       // getdriver ile de methodun ismini cagirdik ..hazir method yani
         driver2.get("https://www.facebook.com");
         driver2.close();
 

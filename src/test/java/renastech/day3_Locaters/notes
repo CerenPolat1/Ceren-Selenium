@@ -1,7 +1,7 @@
 
 
 //        driver.findElement(By.className("gLFyf gsfi")).sendKeys("Apple");
-        //if classname has space in it it is not good idea to use most of the case you will recive an error.
+        //if classname has space in it, it is not good idea to use most of the case you will receive an error.
 //        driver.findElement(By.className("gLFyf")).sendKeys("Apple");
         //you can remove after space and try to locate if classname is unique
 
@@ -20,7 +20,7 @@ for ex : if you wanna print all links in the page then you will use this method
 driver.findElements(By.tagName(a))
 driver.findElements(By.tagName(div))
 
-Utilities Pakage
+Utilities Package
 The reason of using utilities:
  1.to make our code more reusable
  2.easy to maintance
@@ -43,10 +43,10 @@ The reason of using utilities:
  8-xpath
  2 type xpath : Absulate and Relative
 
-        1-Absuluate Xpath  ///bunu kullanma  cunku kullanimi kolay ama kullanisli degil cunku developer yeni div falan eklediginde code degisecek
+        1-Absulate Xpath  ///bunu kullanma  cunku kullanimi kolay ama kullanisli degil cunku developer yeni div falan eklediginde code degisecek
         -start with /
         -you need to start top parent (begning of html code)
-        -it is not usefull becasuse it takes from very top from to child
+        -it is not usefull because it takes from very top from to child
 
         html
             head

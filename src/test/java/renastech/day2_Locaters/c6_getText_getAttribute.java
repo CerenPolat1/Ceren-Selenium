@@ -33,6 +33,6 @@ public class c6_getText_getAttribute {
         //yanii html'de turuncu olarak gorduklerin attribute oluyor
         //text'i bulmak istersek siyah yazanlar text oluyor
         //mor olanlar tag name
-        driver.close();
+        //driver.close();
     }
 }
