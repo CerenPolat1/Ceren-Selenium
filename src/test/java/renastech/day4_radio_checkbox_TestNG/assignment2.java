@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class assignment2 {
     //1. Open Chrome browser
@@ -23,25 +22,27 @@ public class assignment2 {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
+
         driver.get("https://demo.guru99.com/test/radio.html");
 
         Thread.sleep(3000);
 
-        List<WebElement> allcheckboxes= driver.findElements(By.xpath("//input[@type='checkbox']"));
+        List<WebElement> allcheckbx= driver.findElements(By.xpath("//input[@type='checkbox']")); //nasil olusturduk bunu?
+        //normalde 3 check boxi secebilecek bir webelement yoktu o yuzden her birinde ortak olan seyi sectik xpathi olusturuken
+        //ortak olan sey de checkbox yazisiydi o yuzden onu aldik
+        //neden findElement's' aldik cunku 3 checkbox oldugundan
 
-        for (WebElement each : allcheckboxes){
+        for (WebElement each : allcheckbx){
             if (!each.isSelected()){
-
             }else {
-                System.out.println("All check boxes is selected. Test is FAILED ...");
+                System.out.println("all check boxes is selected.");
             }
         }
-        System.out.println("All check boxes is NOT selected. Test is PASSED ...");
+            System.out.println("all check boxes isnt selected.");
 
 
-            Thread.sleep(3000);
+            Thread.sleep(2000);
 
-            //driver.navigate().back();
 
             driver.get("https://demo.guru99.com/test/radio.html");
 
@@ -49,14 +50,15 @@ public class assignment2 {
             radioButton.click();
 
             if (radioButton.isSelected()) {
-                System.out.println("Radio Button 2 is selected!");
+                System.out.println("radio button 2 is selected.");
             } else {
-                System.out.println("Radio Button 2 is unselected! Please check it!");
+                System.out.println("radio button 2 is unselected.");
             }
 
 
-            Thread.sleep(3000);
-            driver.close();
+            Thread.sleep(2000);
+
+            //driver.close();
 
 
         }

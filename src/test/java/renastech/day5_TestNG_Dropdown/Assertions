@@ -1,0 +1,51 @@
+
+ASSERTIONS:
+   -> Assertions are coming from TestNG
+   -> Assertions allows us to do our verification for our test cases
+
+   -> You can pass an additional argument into assertion methods just to provide additional information about what failed.
+           // to be able to print on the console
+
+--> assertEquals :
+      - This method expected two arguments to be passed: actual, expected.
+      - It compares these two values and if they are exact match, it will pass.
+
+--> assertTrue :
+      - This method expects you to pass a boolean value. Or you have to pass a method that returns a boolean value.
+      - If the boolean value is TRUE, it will pass. If not it will fail.
+
+--> assertFalse :
+      - This method expects you to pass a boolean value.
+      - If the boolean value is FALSE, IT WILL PASS. If not, it will fail.
+
+--> If you assertion fails, it will stop running for the current test in the same line where it failed.
+It will move to the next test. And start running that one.
+
+
+How to ignore a test?
+1- Add @Ignore on top of the test.
+
+
+In what order the tests are running if we have multiple tests?
+   -> By default tests are running in alphabetical order. (Case sensitive capitals come first)
+
+   priority => You can change the running order using priority.
+    - We can change the priority which will change the running order of the tests
+
+=======================
+
+How do we handle dropdowns using Selenium?
+
+HOW MANY TYPES OF DROPDOWN ARE THERE?
+
+1- Select dropdowns: are created by using <select> tag in HTML
+
+   <select>
+      <option value="1"> option1 </option>
+      <option value="2"> option2 </option>
+      <option value="3"> option3 </option>
+   </select>
+--use select class to locate them.
+
+2- HTML dropdowns: these are the dropdowns that are created NOT USING <select>
+   - These dropdowns are handled just like any other webElement you will see on the page.

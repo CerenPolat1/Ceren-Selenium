@@ -12,6 +12,7 @@ public class c7_AppleFindElements {
     //2. Go to https://www.apple.com
     //3. Click to iPhone
     //4. Print out the texts of all links
+    //and also unclickable texts
     public static void main(String[] args) {
         WebDriver driver = WebDriverUtil.getDriver("Chrome");
         driver.get("https://www.apple.com");
@@ -44,20 +45,33 @@ public class c7_AppleFindElements {
         int linkWithText=0; //to count elements that has text
         int linkwithoutText=0; //to count elements that doenst have text
 
-        for (WebElement eachLink : allLinks){
-            String elementsToText=eachLink.getText(); //""boyle empty de olabilir  "Airtag" de yazabilir
-            System.out.println(elementsToText);
 
-            if (elementsToText.isEmpty()){
+        for (WebElement eachLink : allLinks){
+
+            String elements=eachLink.getText();
+            System.out.println(elements);
+
+            if (elements.isEmpty()){
                 linkwithoutText++;
             }else {
                 linkWithText++;
             }
         }
+// String listt;
+//        for (WebElement eachLink : allLinks){
+//           listt=eachLink.getText();
+//           if(listt.isEmpty()){
+//               System.out.println("linkwithoutText = " + linkwithoutText++);
+//           }else{
+//               System.out.println("linkWithText = " + linkWithText++);
+//           }
+//        }
+
 
         System.out.println("linkWithText = " + linkWithText);
         System.out.println("linkwithoutText = " + linkwithoutText);
         System.out.println("allLinks.size() = " + allLinks.size());
+        driver.close();
 
 //run yaptiginda cikan sayilar degisebilir cunku updateler gelir yeni functionlar eklenir vs. ayrica farkli ulkelerde
         //farkli sayilar cikar, ulkeden ulkeye degisir yani

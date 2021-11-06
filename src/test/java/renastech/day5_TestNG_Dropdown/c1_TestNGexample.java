@@ -1,10 +1,9 @@
-
-package renastech.day4_radio_checkbox_TestNG;
+package renastech.day5_TestNG_Dropdown;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class c6_TestNG3 {
+public class c1_TestNGexample {
 
     @BeforeClass
     public void setupClass(){ //this one will only run once before everyting in the class
@@ -23,27 +22,20 @@ public class c6_TestNG3 {
         System.out.println("After method is running");
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3 ,dependsOnMethods = "TC3_test")
     public void TC1_test(){
         System.out.println("Test1 is running");
     }
-    @Test(priority = 1) //parantez icine priority koyarak hangi sirayla gitmesini istiyorsan belirityorsun
+    @Test(priority = 1)
     public void TC3_test(){
         System.out.println("Test3 is running");
-
         String actualword="hello";
         String expectedWord="hello2";
 
-        //atllatakini if'le yaptigimizda fail yazsini gosterir ama assert gibi fail yazisini gostermez
-
-        Assert.assertEquals(actualword,expectedWord); //assert method ile ikisinin esit olup olmadigini ogreniyoruz
-        System.out.println("continue test3"); // eger String'ler equal olsaydi, bu println run edecekti
-        //false oldugundan run etmedi.
+        Assert.assertEquals(actualword,expectedWord);
+        System.out.println("continue test3");
     }
 
-
-    //ustteki fail verdi ama diger test caselerde fail yoksa onlar run etmeye devam eder,
-    //cunku bu test caselerin hepsi birbirinden bagimsiz olusur o yuzden bireysel calisir
     @Test(priority = 2)
     public void TC2_test(){
         System.out.println("Test2 is running");
@@ -52,8 +44,11 @@ public class c6_TestNG3 {
 
         Assert.assertTrue(str.equals(str2));
 
+    }
 
-
-
+    @Ignore //will ignore this test and not run
+    @Test
+    public void TC4_test(){
+        System.out.println("Running Test4");
     }
 }

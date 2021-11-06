@@ -33,7 +33,11 @@ public class c2_Checkbox {
         }
 
         //4. Click to checkbox2
-        WebElement checkbox2=driver.findElement(By.xpath("//input[@id='vfb-6-1']"));
+        WebElement checkbox2=driver.findElement(By.xpath("//input[@id='vfb-6-1']")); //neden tekrardan webelement olusturduk??
+        // cunku eger boyle olusturmazsak her defasinda driver'dan sonrasini yazip cagirmamiz gerekecekti
+        //Webelement ile yaratiyoruz ki bundan sonrasinda checkbox2'yu cagirabilelim ve isimiz kolaylassin
+        //yani boylelikle her defasinda bunu: driver.findElement(By.xpath("//input[@id='vfb-6-1']")) cagirmak zorunda kalmayalim
+
         checkbox2.click();
         //5. Verify checkbox2 is selected
 
