@@ -12,7 +12,7 @@ public class c5_javaFakerExample {
         Faker faker=new Faker();
 
         System.out.println("faker.name().fullName() = " + faker.name().fullName());
-        //each time you run you will have new fake results
+        //each time you run you will have new fake results (fake isimler face yani randomly atama yapar)
         System.out.println("faker.name().firstName() = " + faker.name().firstName());
         System.out.println("faker.address().cityName() = " + faker.address().cityName());
 

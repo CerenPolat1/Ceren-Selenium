@@ -19,17 +19,19 @@ ASSERTIONS:
       - If the boolean value is FALSE, IT WILL PASS. If not, it will fail.
 
 --> If you assertion fails, it will stop running for the current test in the same line where it failed.
-It will move to the next test. And start running that one.
+It will move to the next test. And start running that one. //because they are noyt dependcy each other
 
 
 How to ignore a test?
 1- Add @Ignore on top of the test.
+ignore genelde nasil kullaniriz eger kodumuzda sadece bir function check etmek istiyorsak
+digerlerinin run etmesini istemiyorsak o zaman digerlerini ignore a koyariz ki isimiz hizlansin
 
 
 In what order the tests are running if we have multiple tests?
    -> By default tests are running in alphabetical order. (Case sensitive capitals come first)
 
-   priority => You can change the running order using priority.
+   *****priority => You can change the running order using priority.
     - We can change the priority which will change the running order of the tests
 
 =======================

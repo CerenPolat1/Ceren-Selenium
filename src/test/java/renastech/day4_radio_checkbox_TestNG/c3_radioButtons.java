@@ -19,7 +19,17 @@ public class c3_radioButtons {
 
         WebDriver driver=WebDriverUtil.getDriver("chrome");
         driver.get("https://courses.letskodeit.com/practice");
+        //neden navitage to yerine get tercih ediyoruz? loading problemi yuzunden
+        //navigate to driveri beklemez ve hizli hareket eder ama get daha yavas ilerler codun duzgun calismasini saglar
+        // yani driver'in yuklenmesini bekler get
+
+        driver.manage().window().maximize();//if we dont thisand  you try to locate, it can be problem
+        //o yuzden maximize'i kullaniyoruz. and cursor(gosterge) can  move around if we dont put maximize, we prevent that using maxi.
+        //we bunu kullnamdiginda bazen locate yapmana da engel oluyor
+
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //implicit interview sorularindan biri: ne ise yarar nedir gibi
+
 
         WebElement bmwRadioButton=driver.findElement(By.xpath("//input[@id='bmwradio']"));
         bmwRadioButton.click();
@@ -41,5 +51,9 @@ public class c3_radioButtons {
             System.out.println("honda button is selected test failed");
         }
 
+        driver.close();
+        //diyelim sen kodu yazana kadar pek cok sever run ettin ve asagida chrome sayfalari birikti
+        //cunku hala kod yazdigindan driver.close kullanamiyosun
+        //isin bittiginde driver.quit kullanarak asagidaki tum sayfalari kapatabilirsin
     }
 }

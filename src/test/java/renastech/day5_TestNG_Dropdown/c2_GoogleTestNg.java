@@ -25,17 +25,21 @@ public class c2_GoogleTestNg {
     //setup driver and go to google
 
 
-    WebDriver driver; // null driver
+    WebDriver driver; // it is now null driver bec. we didnt assign anything
 
     @BeforeMethod
     public void setUp(){
         //this annotion will apply all of your tests
-        //so its better to use commen steps in here so you dont dublicate steps
+        //so its better to use comman steps in here so you dont dublicate steps
+
         driver= WebDriverUtil.getDriver("Chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("https://www.google.com");
     }
+    //neden bu stepleri buraya koyduk, cunku her zaman sayfa bu adimlarla baslayacak,
+    //biz herhangi bir testi okuttugumuzda before method yani icindeki stepler run edip sonra teste donecek
+    //boylelikle hem isimiz kolaylasiyor hem zaman tasarrufu cunku obur turlu her biri acin adim adim olusturmak gerekecekti
 
     @Test(priority = 1)
     public void TC1_googleVerifyTitle() throws InterruptedException {
@@ -45,7 +49,7 @@ public class c2_GoogleTestNg {
         String expectedTitle="Google";
         String actualTitle= driver.getTitle();
 
-        Assert.assertEquals(expectedTitle,actualTitle,"Title Verification Failed !!!");
+        Assert.assertEquals(expectedTitle,actualTitle,"Title Verification Failed !!!"+actualTitle); //mesaj girdik
 
     }
 
@@ -60,7 +64,7 @@ public class c2_GoogleTestNg {
         searchBox.sendKeys("laptop" , Keys.ENTER);
 
         //make sure title contains laptop
-        String actualTitle= driver.getTitle();//laptop - Google Search
+        String actualTitle= driver.getTitle();//laptop - Google Search gibi kelimeleri aradigimizdan asserttrue yaptik. contain icin
         String containedTitle="laptop";
 
         boolean b=actualTitle.contains(containedTitle);
@@ -71,7 +75,7 @@ public class c2_GoogleTestNg {
 
 
     @AfterMethod
-    public void closing(){
+    public void closing(){  //neden aftermethoda koyduk cunku her zaman en son bu okunacagindan hangisini run edersen et en son bu islenecek
         driver.close();
     }
 

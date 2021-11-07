@@ -31,6 +31,12 @@ public class assignment2 {
         //normalde 3 check boxi secebilecek bir webelement yoktu o yuzden her birinde ortak olan seyi sectik xpathi olusturuken
         //ortak olan sey de checkbox yazisiydi o yuzden onu aldik
         //neden findElement's' aldik cunku 3 checkbox oldugundan
+        //List ise contanier
+
+        //inteerview question:how you use findelements in your framework?
+        //if we want to choose  more than one element, we can use findelements instead of findelement
+
+
 
         for (WebElement each : allcheckbx){
             if (!each.isSelected()){

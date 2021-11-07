@@ -10,7 +10,7 @@ public class SmartBearUtils {
 
     //method goal is to create a util that will do login function for smartbear
 
-    public static void loginForSmartBear(WebDriver driver){
+    public static void loginForSmartBear(WebDriver driver){  //WebDriver driver, classta yer alan isntance null variable
         //3- Enter username --->Tester
         WebElement username=driver.findElement(By.id("ctl00_MainContent_username"));
         username.sendKeys("Tester");
