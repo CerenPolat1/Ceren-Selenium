@@ -25,7 +25,7 @@ public class c3_Dropdown {
     //choose option 1 from dropdown
     //choose option 2 from dropdown
 
-    WebDriver driver;
+    WebDriver driver; //eger librarden utiller cagiracaksan bunu kullan, cu nku tek lazim olan variable
 
     @BeforeClass
     public void beforeClass(){
@@ -35,6 +35,7 @@ public class c3_Dropdown {
     public void afterClass(){
         System.out.println("==============Dropdown Testing Finished==============");
     }
+
     @BeforeMethod
     public void setup(){
         driver= WebDriverUtil.getDriver("Chrome");
@@ -49,7 +50,7 @@ public class c3_Dropdown {
         //1. Open Chrome browser   //done
         //2. Go to "http://the-internet.herokuapp.com/" //done
         //3 click on dropdown
-        driver.findElement(By.xpath("//a[@href='/dropdown']")).click();
+        driver.findElement(By.xpath("//a[@href='/dropdown']")).click(); // WebDriver driver; ana class'in icinde oldugundan cagirabildik
         //or linktext or //a[.='Dropdown']
 
 
@@ -76,8 +77,8 @@ public class c3_Dropdown {
 
         Select dropDown=new Select(dropdownBox);
 
-        //confirm default selected dropdown is "Please select an option"
-        String deaultOption=dropDown.getFirstSelectedOption().getText();
+        //confirm default selected dropdown if it is "Please select an option"
+        String deaultOption=dropDown.getFirstSelectedOption().getText(); //sayfayi actiginda secili olarak duruyor zaten, o yuzden getfirstselected methodunu kullandik
         String expextedDefault="Please select an option";
 
         System.out.println("deaultOption = " + deaultOption);
@@ -115,10 +116,10 @@ public class c3_Dropdown {
 
     }
 
-    @AfterMethod
-    public void closing(){
+ @AfterMethod
+public void closing(){
         driver.close();
-    }
+   }
 
 
 }

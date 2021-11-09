@@ -27,9 +27,14 @@ public class c1_TestNGexample {
         System.out.println("Test1 is running"); //TC3_test fail oldugundan TC1_test de run etmez
     }
 
+    // System.out.println("Test3 is running"); run etti once cunku prioty=1 oldugundan,
+    //sonra altina devam edecekti ancak kodun geri kalani fail oldugundan run etmedi,
+    // o yuzden tc1 kendine dondugunde de run etmedi cunku depended each other
+
     //neden dependsonmethods kullaniyoruz cunku birbiyle iliskili olabilen functionlari kullanmak icin
     //it makes it more efficient
     //or login function, username ve passwordu birletestdin, bunlar olmadan login yapamazsin mesela
+
     @Test(priority = 1)
     public void TC3_test(){
         System.out.println("Test3 is running");

@@ -39,8 +39,8 @@ public class c4_SmartBearLogin {
 
     @AfterMethod
     public void closing() throws InterruptedException {
-        //Thread.sleep(2000);
-        BrowserUtils.wait(2);
+
+        BrowserUtils.wait(2); //Thread.sleep(2000);
         driver.close();
 
     }
