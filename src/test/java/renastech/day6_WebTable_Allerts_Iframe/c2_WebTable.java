@@ -39,10 +39,14 @@ public class c2_WebTable {
     public void TC1_verifyMarkStreetName(){
         //       2. Click on View all orders
         driver.findElement(By.linkText("View all orders")).click();
+
 //       3. Verify Mark Smith has street as  “9, Maple Valley”
 
-        // td[.='9, Maple Valley'] //if your data is unque you can use
-        //td[.='770077007700']//..//td[6]
+        // td[.='9, Maple Valley'] //if your data is unique you can use it
+        //td[.='770077007700']//..//td[6]    //bu 6 nereden geldi, td'den baslayinca 6 sirada ve bu sira degismeyeceginden belirtebiliyoruz
+        //yani 6. sira yanlamasina yani column olarak 6.sirada row olarak degil
+        // bu da -> // seni parent'a goturur
+        //bu da ->  .. seni row'a goturur
         ////td[.='Mark Smith']/following-sibling::td[4]
 
         WebElement markStreet=driver.findElement(By.xpath("//td[.='770077007700']//..//td[6]"));

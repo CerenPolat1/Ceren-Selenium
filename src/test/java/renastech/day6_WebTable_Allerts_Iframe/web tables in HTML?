@@ -41,7 +41,7 @@ How do we handle web tables?
 
 
 //table[@id='ctl00_MainContent_orderGrid']/tbody/tr
-
+                                                    bunlarin ikisi de ayni sey: // demek tbody demek, iki sekilde de kullanabilirsin
 //table[@id='ctl00_MainContent_orderGrid']//tr
 
 ALERTS

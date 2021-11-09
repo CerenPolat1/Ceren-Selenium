@@ -37,6 +37,8 @@ public class c5_smartBearNegativeTest {
 
     @Test(dataProvider = "testData")
     public void TC1_NegativeTest(String userName,String password){
+        // direct alttakilerin ilkini username, 2.yi de password olarak alacak neden  cunku bu method testData ile eslesti diye
+        //userName olarak ilk bolumu, password olarak da 2.bolumu alacak.
         //3- enter incorrect username
         //4- enter wrong password
         //5- click login button
@@ -46,17 +48,45 @@ public class c5_smartBearNegativeTest {
         Assert.assertTrue(errorMessage.isDisplayed());
     }
 
-    @DataProvider(name = "testData")
-    public static Object[][] wrongUserCredentails(){
+    //diyelim positive olarak testlerin gecti bir de negatif olarak bakmak istiyorsun tek tek test olusturmak yerine
+    //data provider kullanarak tek seferde yaparsin bunu
 
-        return new Object[][] {
-                {"esther","esther123"},
-                {"ozge","ozge567"},
-                {"","435345"},
-                {"mesut","easy"},
-                {"sdas&&& %$","234 ^&"},
-                {"Tester","test"}
+    @DataProvider(name = "testData")   //bunun sayesinde istedigin kadar seyi tek seferde run etmis olursun
+    public static Object[][] wrongUserCredentails() {
+
+        return new Object[][]{
+                {"esther", "esther123"}, //username and password
+                {"ozge", "ozge567"},//bunlarin hepsi wrong en alltaki sadece dogru neden fail cunku biz wrong ariyoruz
+                {"", "435345"},
+                {"mesut", "easy"},
+                {"sdas&&& %$", "234 ^&"},
+                {"Tester", "test"}  //correct credendial, o yuzden fail verdi
         };
-
     }
+        //bu versiyonunu yapmasaydik soyle uzun versionunu yapacaktik
+
+        @Test
+        public void TC2_NegativeTest(){
+
+            //3- enter incorrect username
+            //4- enter wrong password
+            //5- click login button
+            SmartBearUtils.negativeLoginForSmartBear(driver, "sfg","cetg");
+            //6- verify error message displayed :Invalid Login or Password.
+            WebElement errorMessage=driver.findElement(By.className("error"));
+            Assert.assertTrue(errorMessage.isDisplayed());
+        }
+
+    @Test
+    public void TC3_NegativeTest(){
+
+        //3- enter incorrect username
+        //4- enter wrong password
+        //5- click login button
+        SmartBearUtils.negativeLoginForSmartBear(driver, "dfgh","erxf");
+        //6- verify error message displayed :Invalid Login or Password.
+        WebElement errorMessage=driver.findElement(By.className("error"));
+        Assert.assertTrue(errorMessage.isDisplayed());
+
+
 }

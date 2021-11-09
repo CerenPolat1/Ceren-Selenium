@@ -23,18 +23,19 @@ public class c4_iframes {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("http://the-internet.herokuapp.com/iframe");
     }
-
+//id her zaman unique'tir sadece dynamic olabilir yani her defasinda yeni unique id'ler olusabilir sikinti zaten orada
     @Test
     public void Iframes(){
         //in order to interact with iframes we will need to swticch driver focus to iframes
         //3- Switching by id or name attribute value.
         //driver.switchTo.frame("idValue");
+
         driver.switchTo().frame("mce_0_ifr");
         WebElement messageBox=driver.findElement(By.id("tinymce"));
         messageBox.clear();
         messageBox.sendKeys("Hello Its ME!!!");
 
-        driver.switchTo().defaultContent();//returns to the main html
+        driver.switchTo().defaultContent();//returns to the main (yani ustteki htmlye) html
         //driver.switchTo().parentFrame() //this will return you previous iframe of html block
 
         System.out.println("driver.getTitle() = " + driver.getTitle());

@@ -32,6 +32,7 @@ public class SmartBearUtils {
     //    //Note : create another utils method under SmartBearUtil class called negativeLoginForSmartBear
     //    //this method should cover step3,4,5
     public static void negativeLoginForSmartBear(WebDriver driver,String userID ,String passwordID){
+
         //3- Enter username --->incorrect username
         WebElement username=driver.findElement(By.id("ctl00_MainContent_username"));
         username.sendKeys(userID);

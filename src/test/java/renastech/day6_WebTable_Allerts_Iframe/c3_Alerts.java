@@ -39,16 +39,27 @@ public class c3_Alerts {
         //locate the alert button to click it
         WebElement allertButton=driver.findElement(By.id("confirm-demo"));
 
+        /*
+        simdi olay su: sen alert box sayfasina geldiginde 'click me' yazan yeri tikladiginda
+        sayfa sana uyari veriyo ve inspect yapmana izin vermiyo yani senin html'ye gitmene izin vermiyor
+        bunu handle edebilmek icin alert methodsunu ve keywordunu kullaniyoruz.
+         */
+
         //click button
         allertButton.click();
         //handle alert
-        //since alert is JC allert you need to cghange your driver focus to allert
+        //since alert is JC allert you need to change your driver focus to alert
+
         Alert alert=driver.switchTo().alert();
         BrowserUtils.wait(2);
-        alert.accept(); //clicking ok
+
+        alert.accept(); //clicking ok button anlamina geliyor,  sayfa simdi html'ye izinn veriyor.
         BrowserUtils.wait(2);
         allertButton.click();
+
         alert.dismiss(); //will click on cancel button
     }
+
+
 
 }

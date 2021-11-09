@@ -31,6 +31,12 @@ public class c3_radioButtons {
         //implicit interview sorularindan biri: ne ise yarar nedir gibi
 
 
+        //radio button (secenek butonu) sana yan yana veya alt alta option sunar, kutucuklar isaretlenir
+
+        //how you handle radio buttons?
+        // you will need to locate web element and click it, and then see if this one is selected
+
+
         WebElement bmwRadioButton=driver.findElement(By.xpath("//input[@id='bmwradio']"));
         bmwRadioButton.click();
 
@@ -51,7 +57,7 @@ public class c3_radioButtons {
             System.out.println("honda button is selected test failed");
         }
 
-        driver.close();
+        //driver.close();
         //diyelim sen kodu yazana kadar pek cok sever run ettin ve asagida chrome sayfalari birikti
         //cunku hala kod yazdigindan driver.close kullanamiyosun
         //isin bittiginde driver.quit kullanarak asagidaki tum sayfalari kapatabilirsin

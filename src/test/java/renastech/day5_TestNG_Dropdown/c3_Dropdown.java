@@ -114,6 +114,9 @@ public class c3_Dropdown {
         //choose option 2 from dropdown
         dropDown.selectByIndex(2); //index 0:disabled, index1=option1,index2=option2
 
+        //aslinda bu dropdown olayi su..bir kutucukta farkli versiyonlari secebilme durumumun olmasi or:
+        //option1, option2, option3 bunlarin hepsi dropdown oluyor yani acilan demek
+
     }
 
  @AfterMethod
