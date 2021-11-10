@@ -1,0 +1,19 @@
+Questions :
+
+1. Why are you using Selenium ? (What is the advantage of using Selenium)
+
+-We are using Selenium to test our test cases. it is one of software testing tools. Also, it presents some advantages:
+One of them is ablut open sources, i mean it is free framework. Also, we can use different browsers (Google, Firefox, etc.)
+and plaforms (Java, Pyhton etc.).
+
+2.What is the webelement ?
+
+
+3.how many locaters
+4 What happens when findElement method cannot locate a webElement?
+5. What is return type of findElement method
+6.WHAT IS MAVEN? Why we use maven project ?
+7. Differences of Thread.Sleep impilict wait
+8.HOW DO WE HANDLE CHECKBOXES AND RADIO BUTTONS USING SELENIUM?
+9.How do we handle dynamic web elements?
+10. Differences Css and Xpath

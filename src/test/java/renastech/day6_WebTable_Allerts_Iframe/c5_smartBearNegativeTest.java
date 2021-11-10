@@ -19,16 +19,17 @@ public class c5_smartBearNegativeTest {
     //4- enter wrong password
     //5- click login button
     //6- verify error message displayed :Invalid Login or Password.
+    //correct username and password:Tester and test
     //Note : create another utils method under SmartBearUtil class called negativeLoginForSmartBear
     //this method should cover step3,4,5
 
     WebDriver driver;
 
     @BeforeMethod
-    public void setup(){
+    public void setup() {
         //1- Open a chrome browser
         //2- Go to:http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx
-        driver= WebDriverUtil.getDriver("chrome");
+        driver = WebDriverUtil.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
@@ -36,20 +37,22 @@ public class c5_smartBearNegativeTest {
     }
 
     @Test(dataProvider = "testData")
-    public void TC1_NegativeTest(String userName,String password){
+    public void TC1_NegativeTest(String userName, String password) {
         // direct alttakilerin ilkini username, 2.yi de password olarak alacak neden  cunku bu method testData ile eslesti diye
         //userName olarak ilk bolumu, password olarak da 2.bolumu alacak.
         //3- enter incorrect username
         //4- enter wrong password
         //5- click login button
-        SmartBearUtils.negativeLoginForSmartBear(driver,userName,password);
+        SmartBearUtils.negativeLoginForSmartBear(driver, userName, password);
         //6- verify error message displayed :Invalid Login or Password.
-        WebElement errorMessage=driver.findElement(By.className("error"));
+        WebElement errorMessage = driver.findElement(By.className("error"));
         Assert.assertTrue(errorMessage.isDisplayed());
     }
 
     //diyelim positive olarak testlerin gecti bir de negatif olarak bakmak istiyorsun tek tek test olusturmak yerine
     //data provider kullanarak tek seferde yaparsin bunu
+//how you run test cases with different data in testng? ->dataprovider
+
 
     @DataProvider(name = "testData")   //bunun sayesinde istedigin kadar seyi tek seferde run etmis olursun
     public static Object[][] wrongUserCredentails() {
@@ -63,30 +66,31 @@ public class c5_smartBearNegativeTest {
                 {"Tester", "test"}  //correct credendial, o yuzden fail verdi
         };
     }
-        //bu versiyonunu yapmasaydik soyle uzun versionunu yapacaktik
-
-        @Test
-        public void TC2_NegativeTest(){
-
-            //3- enter incorrect username
-            //4- enter wrong password
-            //5- click login button
-            SmartBearUtils.negativeLoginForSmartBear(driver, "sfg","cetg");
-            //6- verify error message displayed :Invalid Login or Password.
-            WebElement errorMessage=driver.findElement(By.className("error"));
-            Assert.assertTrue(errorMessage.isDisplayed());
-        }
+    //bu versiyonunu yapmasaydik soyle uzun versionunu yapacaktik
 
     @Test
-    public void TC3_NegativeTest(){
+    public void TC2_NegativeTest() {
 
         //3- enter incorrect username
         //4- enter wrong password
         //5- click login button
-        SmartBearUtils.negativeLoginForSmartBear(driver, "dfgh","erxf");
+        SmartBearUtils.negativeLoginForSmartBear(driver, "sfg", "cetg");
         //6- verify error message displayed :Invalid Login or Password.
-        WebElement errorMessage=driver.findElement(By.className("error"));
+        WebElement errorMessage = driver.findElement(By.className("error"));
+        Assert.assertTrue(errorMessage.isDisplayed());
+    }
+
+    @Test
+    public void TC3_NegativeTest() {
+
+        //3- enter incorrect username
+        //4- enter wrong password
+        //5- click login button
+        SmartBearUtils.negativeLoginForSmartBear(driver, "dfgh", "erxf");
+        //6- verify error message displayed :Invalid Login or Password.
+        WebElement errorMessage = driver.findElement(By.className("error"));
         Assert.assertTrue(errorMessage.isDisplayed());
 
 
+    }
 }

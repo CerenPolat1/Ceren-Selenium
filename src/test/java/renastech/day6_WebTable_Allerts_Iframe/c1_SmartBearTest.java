@@ -108,7 +108,7 @@ public class c1_SmartBearTest {
 
         //10Enter expiration date
         WebElement expDate= driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox1"));
-        expDate.sendKeys("05/27");  //necn tarih girdik faker yerine, bunun icin faker bulamadik attik kafadan
+        expDate.sendKeys("05/27");  //neden tarih girdik faker yerine, bunun icin faker bulamadik attik kafadan
         //11. Click on “Process”
         WebElement proccessButton=driver.findElement(By.id("ctl00_MainContent_fmwOrder_InsertButton"));
         proccessButton.click();

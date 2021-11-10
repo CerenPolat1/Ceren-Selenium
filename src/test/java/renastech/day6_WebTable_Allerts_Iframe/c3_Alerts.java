@@ -48,9 +48,10 @@ public class c3_Alerts {
         //click button
         allertButton.click();
         //handle alert
-        //since alert is JC allert you need to change your driver focus to alert
+        //since alert is JC alert you need to change your driver focus to alert
 
-        Alert alert=driver.switchTo().alert();
+        Alert alert=driver.switchTo().alert();  //neden switch yapmak zorundayiz cunku selenium sadece ayni anda tek bir seye odaklanir
+        //-> Selenium can only focus one thing at a time.
         BrowserUtils.wait(2);
 
         alert.accept(); //clicking ok button anlamina geliyor,  sayfa simdi html'ye izinn veriyor.

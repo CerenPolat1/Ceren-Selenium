@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import java.util.List;
+
 public class SmartBearUtils {
 
     //method goal is to create a util that will do login function for smartbear
@@ -43,4 +45,35 @@ public class SmartBearUtils {
         WebElement loginButton=driver.findElement(By.id("ctl00_MainContent_login_button"));
         loginButton.click();
     }
+
+
+    public static void verifyStreet(WebDriver driver,String streetName){
+        //to locate all table ctl00_MainContent_orderGrid
+        //table[@id='ctl00_MainContent_orderGrid']  to loacate all table
+        //table[@id='ctl00_MainContent_orderGrid']//tr  to locate all 9 rows
+        //table[@id='ctl00_MainContent_orderGrid']//tr[3] -- this will locate 3.row from table --1 row
+        //table[@id='ctl00_MainContent_orderGrid']//tr//td[6]
+        // -- this will locate each 6.td from each row so that is technically column 6
+        ////table[@id='ctl00_MainContent_orderGrid']//tr[2]//td[2] from second row second data only one data
+
+        List<WebElement> streetList=driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr//td[6]"));
+        //this xpath will store all the street names from table
+
+        for (WebElement eachStreet : streetList){
+
+            if (eachStreet.getText().equals(streetName)){ //bu if eger run etmezse asserte gidecek
+                Assert.assertTrue(eachStreet.getText().equals(streetName));
+                return; //neden return kullandik cunku dogruysa kendini run et demek
+            }
+        }
+
+        Assert.fail("Street name : " + streetName + " is not presnet on the table");
+
+    }
+
+
+
+
+
+
 }
