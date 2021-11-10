@@ -1,3 +1,4 @@
+
 Questions :
 
 1. Why are you using Selenium ? (What is the advantage of using Selenium)
@@ -8,12 +9,75 @@ and plaforms (Java, Pyhton etc.).
 
 2.What is the webelement ?
 
+-Web element refers to a HTML element. The HTML documents are composed of HTML elements.
+ It consists a start tag, an end tag and the content in between.
+ For instance, a HTML element is written as: "<tagname> content </tagname>"
 
-3.how many locaters
+3.how many locaters are there in selenium?
+
+-We have 8 locaters in Selenium. They are name, classname, id, linktext, partiallinktext, tagname, xpath, css
+
 4 What happens when findElement method cannot locate a webElement?
-5. What is return type of findElement method
+
+- NoSuchElementException occurs when WebDriver is unable to find and locate elements.
+ Usually, this happens when tester writes incorrect element bin the findElement(By, by) method.
+ This exception is thrown even if the element is not loaded.
+
+
+5. What is return type of findElement method?
+
+-It  returns the first matching web element if multiple web elements are found by the locator.webElement
+
 6.WHAT IS MAVEN? Why we use maven project ?
-7. Differences of Thread.Sleep impilict wait
+
+-Maven is a tool that can be used for building and managing any Java-based project.
+It is used for projects build, dependency and documentation.
+Maven does a lot of helpful task:
+We can easily build a project using maven.
+We can add jars and other dependencies of the project easily.
+Maven provides project information (log document, dependency list, unit test reports etc.)
+Maven is very helpful for a project while updating central repository of JARs and other dependencies.
+With the help of Maven we can build any number of projects into output types like the JAR, WAR etc without doing any scripting.
+Using maven we can easily integrate our project with source control system (such as Subversion or Git).
+
+7. Differences of Thread.Sleep impilict wait?
+
+-Thread. sleep method runs until given certain time. if we put 5 second to wait,
+ it will wait 5 second, then code will run again and Thread. sleep() method throws exception, so we need to handle exception
+ However, The Implicit Wait method doesnt wait for specific time. Even if we put 5 second or any kinda time,
+ it will run without waiting specific time that we put..it just waits driver and then starts to run after driver..
+ it depens on the driver's speed. it doesnt terhrow exception.
+
 8.HOW DO WE HANDLE CHECKBOXES AND RADIO BUTTONS USING SELENIUM?
+
+-The main difference between Radio button and Checkbox is
+using radio button we will be able to select only one option from the options available.
+ whereas using checkbox, we can select multiple options.
+ Using Click() method in Selenium we can perform the action on the Radio button and on Checkbox.
+Before performing the click even on the Radio buttons or checkboxes we will have to verify
+
+If Radio button or Checkbox is displayed on the webpage
+If Radio button or Checkbox is enabled on the webpage
+Check the default selection of the Radio button or Checkbox
+isDisplayed()
+isEnabled()
+isSelected()
+We can locate the check boxes and radio buttons on a web page
+using any of the locators or as per the locators usage strategy for the project
+
+
 9.How do we handle dynamic web elements?
+
+-We can use xpath or Css locators to handle it.
+
 10. Differences Css and Xpath
+
+-Xpath allows bidirectional flow so,  traversal can be both ways from parent to child and child to parent as well.
+Css allows only one directional flow which means the traversal is from parent to child only.
+Xpath is slower in terms of performance and speed. Css has better performance and speed than xpath.
+Xpath allows identification with the help of visible text appearing on screen with the help of text() function.
+Css does not have this feature.
+There are two types of xpath – absolute and relative. But css has no such types.
+
+
+
