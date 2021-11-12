@@ -53,7 +53,7 @@ public class c1_WebTablePractice {
         //eger row'un kacinci sirada oldugunu belirtmezsek tum row'larin 2.siradakini alir:
         ////table[@id='ctl00_MainContent_orderGrid']//tr//td[2] tum row'larda name'i alir
 
-        //    -- ne?????
+        //  asagidakini yapmasaydik yukaridaki // aldigimiz stepleri tek tek yapmamiz gerekecekti
 
 
         SmartBearUtils.verifyStreet(driver,"17, Park Avenue");

@@ -14,10 +14,11 @@ public class PropertiesReadingUtil {
     //5- close.file
     //plus dont forget to handle exceptions
 
+
     private static Properties properties=new Properties();
     //encapsulation hide the data
 
-    static {//will get execute before everything
+    static {//will get execute before everything  //bunu illa static yapmaya gerek yok, testin icine de koyabilirdik
         //2- get the path and store in String
         String pathForPropertiesFile="configuration.properties";
         //3-  open the file use Fileinputstream method
@@ -37,3 +38,5 @@ public class PropertiesReadingUtil {
         return properties.getProperty(keyword);
     }
 }
+
+//configurationn properties:yapilandirma ozellikleri

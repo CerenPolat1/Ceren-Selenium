@@ -32,6 +32,11 @@ public class c2_Tabs extends TestBase {
         //since we didnt change driver focus it will give us same thing  from beginning
 
         Set<String> allwindows= driver.getWindowHandles();//this will store all the tabs (windows)
+        //neden burada set kullandik cunku bazi methodlarin return typleri string bazilari int
+        //peki bunu nereden anliyoruz? .getWindowHandles() methodunun ustune geldigimizde bize return type'inin
+        //set oldugunu soyluyor
+        //mesela findelement'in return type'i list, o yuzden onu list'e koyuyoruz
+        //ama diyelim bu methodlarin return typle'lari void ise o zaman istedigini kullanabilirsin
 
 //        How to get all of the window handles of the currently opened tabs/windows?
 //      -> driver.getWindowHandles() --> will return a SET of string that contains all the windows or tabs that you have.
@@ -44,8 +49,9 @@ public class c2_Tabs extends TestBase {
 //toplamda 2 tane windowum var, o yuzden 2 tane run etti console'da
     }
 
+//how you get tabs and windows?
 
-
+//using getwindowhandle method
 
 
 }
