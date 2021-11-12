@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import renastech.utilities.BrowserUtils;
 import renastech.utilities.SmartBearUtils;
 import renastech.utilities.WebDriverUtil;
 
@@ -72,7 +71,7 @@ public class c1_SmartBearTest {
         //sonucusunu 0'a cevirir
 
         quantity.sendKeys("5");
-        //quantity.clear(); //5 olmasi gerekirken o, default olarak 0a ceviriyor
+        //quantity.clear(); //5 olmasi gerekirken o, default olarak 0'a ceviriyor
 
         //6. Click to “Calculate” button
         WebElement calculateButton=driver.findElement(By.xpath("//input[@value='Calculate']"));//niye calculate'i aldik bir cok secenegin var bu unique oldugundan aldik
@@ -114,7 +113,8 @@ public class c1_SmartBearTest {
         proccessButton.click();
 
         //12.Verify success message “New order has been successfully added.” is displayed.
-        WebElement succesMessage= driver.findElement(By.xpath("//strong"));//sadece bi tane strong div oldugundan direct onu yazdik  buraya
+        WebElement succesMessage= driver.findElement(By.xpath("//strong"));//sadece bi tane strong div oldugundan direct onu yazdik buraya
+                                                     //       //div//strong olarak da yazilabilirdi
 
         Assert.assertEquals(succesMessage.getText(),"New order has been successfully added.");
     }

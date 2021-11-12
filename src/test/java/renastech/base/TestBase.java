@@ -25,6 +25,6 @@ public class TestBase {
         BrowserUtils.wait(3);
 
         //driver.quit();    //This will close all the tabs
-        driver.close();    //will close only current tab
+        //driver.close();    //will close only current tab
     }
 }

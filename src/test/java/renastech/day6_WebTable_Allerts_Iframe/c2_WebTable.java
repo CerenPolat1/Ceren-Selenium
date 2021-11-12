@@ -44,7 +44,7 @@ public class c2_WebTable {
 
         // td[.='9, Maple Valley'] //if your data is unique you can use it
         //td[.='770077007700']//..//td[6]    //bu 6 nereden geldi, td'den baslayinca 6 sirada ve bu sira degismeyeceginden belirtebiliyoruz
-        //yani 6. sira yanlamasina yani column olarak 6.sirada row olarak degil
+        //yani 6. sira yanlamasina yani row olarak 6.sirada colomn olarak degil
         // bu da -> // seni parent'a goturur
         //bu da ->  .. seni row'a goturur
         ////td[.='Mark Smith']/following-sibling::td[4]

@@ -9,8 +9,9 @@ import renastech.utilities.BrowserUtils;
 import java.util.Set;
 
 public class c2_Tabs extends TestBase {
-    //inheritence example to exteand my testbase class to all of my test
-    //
+
+    //inheritence example to extend my testbase class to all of my test
+
 
     @Test
     public void TC1_tabHandle(){
@@ -18,7 +19,7 @@ public class c2_Tabs extends TestBase {
         driver.findElement(By.id("selenium-Elements")).click();
         driver.findElement(By.id("WindowsII")).click();
 
-        String currentWindow=driver.getWindowHandle();//this will only store one window
+        String currentWindow=driver.getWindowHandle();//this will only store one window, ynei windowda calisman gerekiyor o yuzden bu islemi yapiyorux
         //and it will store current window that you have
         System.out.println("currentWindow = " + currentWindow);  //window'un codu her zaman unique'tir
         System.out.println("driver.getTitle() = " + driver.getTitle());
@@ -36,11 +37,11 @@ public class c2_Tabs extends TestBase {
 //      -> driver.getWindowHandles() --> will return a SET of string that contains all the windows or tabs that you have.
 
         for (String tab : allwindows){
-            driver.switchTo().window(tab);
+            driver.switchTo().window(tab); //extra tab icin yapmiyoruz cunku tab de window
             BrowserUtils.wait(2);
             System.out.println(driver.getTitle());
         }
-
+//toplamda 2 tane windowum var, o yuzden 2 tane run etti console'da
     }
 
 

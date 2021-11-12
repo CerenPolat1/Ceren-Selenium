@@ -46,7 +46,7 @@ public class c3_Alerts {
          */
 
         //click button
-        allertButton.click();
+        allertButton.click(); //it is not working like this
         //handle alert
         //since alert is JC alert you need to change your driver focus to alert
 
@@ -54,11 +54,11 @@ public class c3_Alerts {
         //-> Selenium can only focus one thing at a time.
         BrowserUtils.wait(2);
 
-        alert.accept(); //clicking ok button anlamina geliyor,  sayfa simdi html'ye izinn veriyor.
+        alert.accept(); //clicking ok button anlamina geliyor,  sayfa simdi html'ye izin veriyor.
         BrowserUtils.wait(2);
         allertButton.click();
 
-        alert.dismiss(); //will click on cancel button
+        alert.dismiss(); //sayfada cikan alert uyari yazisini cancel etmeye yariyor
     }
 
 

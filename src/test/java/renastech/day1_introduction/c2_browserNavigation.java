@@ -36,4 +36,9 @@ public class c2_browserNavigation {
 
         chromeDriver.close();
     }
+
+    //html'deki renkler ne anlama geliyor???????
+    //turuncular:attribute
+    //siyah:text
+    //mor:tag name
 }

@@ -51,7 +51,7 @@ public class c2_Checkbox {
         driver.close();
 
 //checkbox'in calismadigini dusun, bunu verify yapmak icin html sayfasindan yine locator kullanmak gerek
-        //to be able to do test Ny web element
+        //to be able to do testNg web element
         // first action that i need to do is to locate webelement
 
 

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import renastech.utilities.BrowserUtils;
 import renastech.utilities.WebDriverUtil;
 
 import java.util.concurrent.TimeUnit;
@@ -32,7 +33,10 @@ public class c4_iframes {
 
         driver.switchTo().frame("mce_0_ifr"); //-> Selenium can only focus one thing at a time.
         WebElement messageBox=driver.findElement(By.id("tinymce"));
+
+        BrowserUtils.wait(2);
         messageBox.clear();
+        BrowserUtils.wait(2);
         messageBox.sendKeys("Hello Its ME!!!");
 
         driver.switchTo().defaultContent();//returns to the main (yani ustteki htmlye) html

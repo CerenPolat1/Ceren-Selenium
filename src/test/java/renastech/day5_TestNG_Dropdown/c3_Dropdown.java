@@ -25,7 +25,7 @@ public class c3_Dropdown {
     //choose option 1 from dropdown
     //choose option 2 from dropdown
 
-    WebDriver driver; //eger librarden utiller cagiracaksan bunu kullan, cu nku tek lazim olan variable
+    WebDriver driver; //eger libraryden utiller cagiracaksan bunu kullan, cu nku tek lazim olan variable
 
     @BeforeClass
     public void beforeClass(){
@@ -97,7 +97,7 @@ public class c3_Dropdown {
 
         //select dropdowns are created by using <Select> tag in HTML
         //and if it is select dropdown you can handle by using Select class
-        WebElement dropdownBox=driver.findElement(By.id("dropdown"));
+        WebElement dropdownBox=driver.findElement(By.id("dropdown"));//2.sayfadaki kisim
 
         Select dropDown=new Select(dropdownBox);
 
@@ -121,7 +121,8 @@ public class c3_Dropdown {
 
  @AfterMethod
 public void closing(){
-        driver.close();
+
+        //driver.close();
    }
 
 
