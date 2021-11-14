@@ -15,7 +15,7 @@ public class PropertiesReadingUtil {
     //plus dont forget to handle exceptions
 
 
-    private static Properties properties=new Properties();
+    private static Properties properties=new Properties(); //file'lari okuyabilmek icin, yani conffiguration'i okuyyabimek icin
     //encapsulation hide the data
 
     static {//will get execute before everything  //bunu illa static yapmaya gerek yok, testin icine de koyabilirdik

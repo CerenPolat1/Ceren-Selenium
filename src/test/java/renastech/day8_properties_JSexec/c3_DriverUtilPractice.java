@@ -23,7 +23,7 @@ public class c3_DriverUtilPractice extends TestBase2 {
 
         String searchItem=PropertiesReadingUtil.getProperties("google_searchData");
         searchBox.sendKeys(searchItem + Keys.ENTER);
-        //veriffy title contains helllo
+        //verify title contains hello
 
         BrowserUtils.wait(2);
         System.out.println("DriverUtil.getDriver().getTitle() = " + DriverUtil.getDriver().getTitle());

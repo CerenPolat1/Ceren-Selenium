@@ -37,21 +37,31 @@ public class assignemnt1 {
    }
 
     @Test
-    public void viewallproducts(){
+    public void viewallproducts() {
 
-       SmartBearUtils.loginForSmartBear(driver);
+        SmartBearUtils.loginForSmartBear(driver); //
         BrowserUtils.wait(3);
-      WebElement allproduct= driver.findElement(By.xpath("//a[@href='Products.aspx']"));
-      allproduct.click();
+        WebElement allproduct = driver.findElement(By.xpath("//a[@href='Products.aspx']"));
+        allproduct.click();
         BrowserUtils.wait(3);
-
-
+        WebElement table= driver.findElement(By.className("ProductsTable")); // whole table
+        table.click();
+     //bir testte diyelim bir yerin locatini aldin, ve o locaterla iliskili bir locatera gideceksen ayni testin icinde olmali
+    }
 
     //verify prices for each product
    //expected Mymoney 100 ,familyalbum 80 , Screensaver 35
+@Test
+public void  viewallproducts2(){
 
-       WebElement table= driver.findElement(By.className("ProductsTable")); // whole table
-       table.click();
+      SmartBearUtils.loginForSmartBear(driver);
+    WebElement allproduct = driver.findElement(By.xpath("//a[@href='Products.aspx']"));
+    allproduct.click();
+    BrowserUtils.wait(3);
+    WebElement table= driver.findElement(By.className("ProductsTable")); // whole table
+    table.click();
+
+
 
        //  //table[@class='ProductsTable']//tr//td    specifik olarak belirtmedigimizden  tr ve td'nin tumunu alir yani tum listeyi
         //  in this way, i list all the elements in the table

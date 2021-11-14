@@ -20,16 +20,18 @@ public class c4_PopertiesPractice {
     @Test
     public void TC2_configurationProperties() throws FileNotFoundException {
         //to be able to make our code understand properties file i need to connect to my file
-        Properties properties=new Properties();
 
-        String pathForPropertiesFile="configuration.properties";
+        Properties properties=new Properties();  // file'lari cagiriyoruz, saklamaz istediklerimizi
+
+        String pathForPropertiesFile="configuration.properties";  //configuration'i kullanmak icin    Properties properties=new Properties(); olusutuyoruz
 
         //bunu nereden bulduk, configuration.properties'e sag click, copy Path diyerek,,
         // simdi sadece copy yapmak istedigin seyin ustune click yap o kadar
         //we need to get path of file either absulate or root
 
         //we need to tell compiler to open this file
-        FileInputStream fileInputStream=new FileInputStream(pathForPropertiesFile); //2.kisim exception v eriyo onda da throw kullan ya da ne istersen
+        FileInputStream fileInputStream=new FileInputStream(pathForPropertiesFile); //2.kisim exception veriyo onda da throw kullan ya da ne istersen
+        //file'lari acmak icin bunu olusturuyoruz
 
         try {
             properties.load(fileInputStream);//file needs to be loaded in the automation

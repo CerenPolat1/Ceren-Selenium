@@ -80,4 +80,27 @@ Css does not have this feature.
 There are two types of xpath – absolute and relative. But css has no such types.
 
 
+Advantages of using a software framework:
 
+
+Code is more secure
+Duplicate and redundant code can be avoided
+Helps consistent developing code with fewer bugs
+Makes it easier to work on sophisticated technologies
+Several code segments and functionalities are pre-built and pre-tested. This makes applications more reliable
+Testing and debugging the code is a lot easier and can be done even by developers who do not own the code
+The time required to develop an application is reduced significantly
+
+
+Difference between a Library and a Framework:
+
+Some may assume that a software framework is a collection of libraries just as libraries are a collection of precompiled routines.
+However, this is not true as not all software frameworks use or depend on libraries.
+
+
+Programming language vs Frameworks:
+
+A programming language tells the computer what it should do. Every programming language features a syntax
+and a particular set of rules, which need to be followed every time the code is written.
+A software framework is built on top of a programming language. For example,
+Rails, also known as Ruby on Rails, is a web framework built on top of the Ruby programming language.
