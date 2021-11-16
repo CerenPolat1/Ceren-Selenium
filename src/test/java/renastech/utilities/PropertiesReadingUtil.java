@@ -1,7 +1,6 @@
 package renastech.utilities;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -15,12 +14,14 @@ public class PropertiesReadingUtil {
     //plus dont forget to handle exceptions
 
 
-    private static Properties properties=new Properties(); //file'lari okuyabilmek icin, yani conffiguration'i okuyyabimek icin
-    //encapsulation hide the data
+    private static Properties properties=new Properties(); //file'lari okuyabilmek icin, yani configuration'i okuyabilmek icin
+    //encapsulation -hide the data
 
-    static {//will get execute before everything  //bunu illa static yapmaya gerek yok, testin icine de koyabilirdik
+    static { //will get execute before everything  //bunu illa static yapmaya gerek yok, testin icine de koyabilirdik
+
         //2- get the path and store in String
         String pathForPropertiesFile="configuration.properties";
+
         //3-  open the file use Fileinputstream method
         //we need to tell compiler to open this file
         try {
@@ -34,7 +35,8 @@ public class PropertiesReadingUtil {
         }
     }
 
-    public static String getProperties(String keyword){
+    public static String getProperties(String keyword) {
+
         return properties.getProperty(keyword);
     }
 }

@@ -30,6 +30,7 @@ public class c3_actionHoverOver extends TestBase2 {
         //  /preceding-sibling  will go previous sibling
         //  /following-sibling  will go next sibling
         //yukaridakilerin hepsi ayni kapiya cikiyor
+
         WebElement thirdimage=DriverUtil.getDriver().findElement(By.xpath("//h5[.='name: user3']/../preceding-sibling::img"));
 
 
@@ -37,9 +38,12 @@ public class c3_actionHoverOver extends TestBase2 {
 
         actions.moveToElement(thirdimage).perform();
 
-        WebElement ImageText=DriverUtil.getDriver().findElement(By.xpath("//h5[.='name: user3']")); //text'i verfy etmek icin olussturduk bunu aslinda
+        WebElement ImageText=DriverUtil.getDriver().findElement(By.xpath("//h5[.='name: user3']")); //text'i assert etmek icin olussturduk bunu aslinda
 
         boolean testIsPresent=ImageText.isDisplayed();
         Assert.assertTrue(testIsPresent,"text is not present");
+
+        //action'da yaptigimiz hover over yani mouse'u surekleme olayinda kullanilan method:
+        //movetoelement
     }
 }

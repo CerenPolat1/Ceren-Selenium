@@ -20,25 +20,38 @@ public class SmartBearLoginPage extends BasePage {
 
     @FindBy(id = "ctl00_MainContent_status")
     private WebElement statusMassege;
-    //if this is priavate you wont have access from outside
+    //if this is private, you wont have access from outside
     //you will need create some methods to be able to use it:getter method
 
 
     //    //3. Create methods related webelements
 
     //-Name of these methods should be given as per the task they are performing,
-    public void loginSmartBear(String username,String password){
+    public void loginSmartBear(String username,String password){   // bu method'a invalid degerler girdiginde test'in negatife doner bunu burada degil bu methodu cagirdigin yerde yaparsin
         //either you can also assign your username and password from properties file
         //or just from coling the method
 
-        usernameBox.sendKeys(username);  //(username) ve (password) SmartBearUtils'den geliyor
+        usernameBox.sendKeys(username);
         passwordBox.sendKeys(password);
         loginButton.click();
 
     }
 
-    public String getStatusMessage(){
+    // negative login page yaratmaya gerek yok, result'in positive or nagatif olmasi onemli
+    //you dont create seperate page for positive and negative result
+    //peki page yarattigimizda icine ne olusturuyoruz?
+    // webelements ******
+    //you dont need negatif login method
+    //always try to make your method as resusable as you can
+
+    public String getStatusMessage(){  //return type string
         return statusMassege.getText();
+    } //getter method bec. of private WebElement statusMassege;
+
+    // bu method'u String yapmak zorunda degiliz, baska turlu de yapabilirdik:
+
+    public WebElement getStatusMassegeElement(){ //boyle de olusturabilirdik, return type:Webelement
+        return statusMassege;
     }
 
 
