@@ -1,7 +1,6 @@
-package renastech.day_10_POM_ExplicitWait;
+package renastech.day10_POM_ExplicitWait;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import renastech.Pages.SeleniumPracticeExplicitWaitPage;
@@ -44,3 +43,16 @@ public class c3_explicitwaitEx extends TestBase2 {
         Assert.assertEquals(actualText.getText(),"WebDriver" , "Webdriver text is not present on the page!!");
     }
 }
+
+// *******************************
+//we extend TestBase2 with logic of inheritence
+//we get before and after method
+//we create page class SeleniumPracticeExplicitWaitPage
+//and we stored webelements that we need to be able to do testing and some usefull methods
+//create an object from page to be able to call webelements and methods
+//you navigate your url with using properties file and properties util
+//then you click on timer
+//then you waited until webdriver text to be present
+//then verify your text was present
+
+//**********************************

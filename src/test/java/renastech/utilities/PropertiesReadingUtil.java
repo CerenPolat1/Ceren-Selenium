@@ -25,13 +25,13 @@ public class PropertiesReadingUtil {
         //3-  open the file use Fileinputstream method
         //we need to tell compiler to open this file
         try {
-            FileInputStream fileInputStream=new FileInputStream(pathForPropertiesFile);
+            FileInputStream fileInputStream=new FileInputStream(pathForPropertiesFile);//pathForPropertiesFile'i okusun istiyoruz
 
             //4-  load the file to properties object by using load method from properties
             properties.load(fileInputStream);//file needs to be loadded in the automation
         } catch (IOException e) {  //biz bu exception'i parent'a cevirdik cunku   properties.load(fileInputStream) icin yeterli degildi
             e.printStackTrace();
-            System.out.println("Properties File Not Founded!!!");
+            System.out.println("Properties File Not Found!!!");
         }
     }
 

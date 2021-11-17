@@ -1,0 +1,12 @@
+
+
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Smoke">
+    <test name="Smoke Module Day 9">
+        <classes>
+            <class name="renastech.day9_Actions_POM.c1_dropdown"></class>
+            <class name="renastech.day9_Actions_POM.c2_ActionsExamples"></class>
+        </classes>
+    </test>
+</suite>

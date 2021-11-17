@@ -104,3 +104,38 @@ A programming language tells the computer what it should do. Every programming l
 and a particular set of rules, which need to be followed every time the code is written.
 A software framework is built on top of a programming language. For example,
 Rails, also known as Ruby on Rails, is a web framework built on top of the Ruby programming language.
+
+What are the main structor that you see in the framework(selenium)? suan bizim kullandigimizdan bahsetti
+   ** Pom, Pages, utilities, base, properties, configuration properties, also test classes
+
+
+**************************************************************************************************
+
+We have maven project that we create and maven project comes with Pom xml file that i store all my dependencies
+to be able to perform my test.I also have my base classes where i store my before (set up information for my test )
+and after (closing information for my test) methods.and i also cretaed abstract class to be able to implement
+abstruction.
+I also have my utilities package in my framework where I store some important utils to be able to perform my test
+such as browser utils, driver utils. Also, i am using silgelton design pattern method
+and my driver utils allow me do cross browsing testing.
+I also have properties reading file because i have my properties file where i store some important ulr, enviroment names
+and some important datas and to be able to read this file, i created util that will help me to read this file and
+get the information that i need.
+and i have Pages where I implement Page object model in selenium.
+So how i implement Pom is creating page classes for every page of my webside and i store webelements
+that i need to use on my test and also i create some methods that will help me to call my test classes
+and do my action. the reason that i am using POM bec. it makes my  framework reusable adn it will be easy
+to maintance if i have any locators issue it will be easy for me to go back and change it from there.
+and it will be also easy to reat it.
+and i have my reagular test classes where i used some OOP concept to extend my base class which is inheritance
+that i am using.
+Also i create object from specific pages that i need and call the methods or webelements to be able to
+perform my actions
+Eger kullandigin util'e ornek vermen gerekirse Driver utilden bahset ve orada singelton design pattern kullandigini acikla
+for example i create driver util to be able to achive singleton pattern.
+Also i put it some cases where i use some chrome headless and firefox headless, headless browser
+Also to be able to achive my singelton dewign pattern, i create private constructor,
+so noone is able to create any object from my driver util and thats whay i made it singleton
+bacause it has one single object.noone be able to create it and i assign my singilton driver with the
+encapsulation. i set my driver with encapsulation method of java
+

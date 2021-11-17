@@ -36,6 +36,17 @@ public class SmartBearLoginPage extends BasePage {
         loginButton.click();
 
     }
+/*
+yukaridaki methodu niye olusturduk? cunku ihtiyacimiz oldugundan olusturduk because we wanted to login smart bear
+
+alttaki methodu niye olusturduk?
+it gıves us status messageç why we created it? because our test was telling us that
+it is fail, get me the text of this status.otherwise, we dont need to create these methods
+ */
+
+
+
+
 
     // negative login page yaratmaya gerek yok, result'in positive or nagatif olmasi onemli
     //you dont create seperate page for positive and negative result

@@ -1,0 +1,21 @@
+
+
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Regrassion">
+    <test name="Regression module 5">
+        <packages>
+            <package name="renastech.day5_TestNG_Dropdown"></package>
+        </packages>
+    </test>
+    <test name="Regression module 6">
+        <packages>
+            <package name="renastech.day6_WebTable_Allerts_Iframe"></package>
+        </packages>
+    </test>
+    <test name="Regreassion modul 7">
+        <classes>
+            <class name="renastech.day7_Windows_Tabs_Properties.c1_WebTablePractice"></class>
+        </classes>
+    </test>
+</suite>

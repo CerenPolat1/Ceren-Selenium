@@ -1,0 +1,665 @@
+ALL NOTES
+----------------------DAY1 NOTES----------------------------------
+Selenium :
+    -Basically a collection of jar files
+    -The jar files have classes
+    -Those classes have ready method
+    -We use those jar files to do action on the browsers.
+Maven :
+    -Maven is a built automation tool
+    -Help us to create  projects
+    -It is giving us ready pom.xml file
+    Maven helps me to store my dependicies
+
+Pom.xml
+    -Pom helps us manage and add dependicies under project
+
+-To be able to do any action on web element  we need to lacate that web element with selenium Webdriver.
+-We are going to use findElement(By.locater)
+
+findElement(By.locater)
+    -this method will return a single webelement
+    -return type is webelement
+    -it is going to trow NosuchElementExeption if it cant find it.
+Locater
+-We have 8 locaters in selenium
+1.name
+2.classname
+3.id
+4.linktext
+5.partiallinktext
+6.tagname
+7.xpath
+8.css
+----------------------DAY2 NOTES----------------------------------
+Locators :
+They are helping us to locate any webelement that you see on the webpage
+8 different locators in selenium
+1.name
+2.linktext
+3.partiallinktext
+4.id
+5.classname
+6.tagname
+7.css
+8.xpath
+1.Name:
+ This locator will be looking into the whole HTML code and return the webelement with matching name attribute value
+ --this one fill find and return the first webelemt it finds.
+ syntax : driver.findElement(By.name("name attribute value")).
+
+2.Linktext (equals the text)   ///////linktext oldugunu a tag'den anlarim
+--this locater allows us to locate links by their text
+--this locater will only works if webelement has links
+        How do i understand if the webelemt has links ?
+        <a href="https//www.amazon.com"> Text amazon </a>
+        Tagname --> a
+        Attribute --> href
+        Atrribute Value https//www.amazon.com
+        Link text -- Text amazon
+
+syntax : driver.findElement(By.linktext("Text amazon"));
+3.Partiallinktext (contain the text)
+--this locater allows us to locate links by their text
+--but it doesnt need exact match for text
+
+syntax : driver.findElement(By.partialLinktext("amazon"));
+--To Search something in html
+for mac click command+F
+for windows ctrl+F
+
+4.id
+--id will locate by matching id attribute's value.
+--id is unique for the specific webelement
+--if if you have id and its not dynamic you should always use id .
+dynamic (when you refresh if you see id value is changing that means id is dynamic )
+syntax : driver.findElement(By.id("id attribute value"));
+
+5.className :  //classname'in unique olsun olmasin space varsa kullanilmaz, sadece space'a kadar olan kismi alinir
+--className is not unique , thats why it might have multiple values of the same attribute
+--and it will return you the first one it finds
+syntax : driver.findElement(By.className("class attribute value"));
+
+----------------------DAY3 NOTES----------------------------------
+//lets try with clasname
+//        driver.findElement(By.className("gLFyf gsfi")).sendKeys("Apple");
+        //if classname has space in it it is not good idea to use most of the case you will recive an error.
+//        driver.findElement(By.className("gLFyf")).sendKeys("Apple");
+        //you can remove after space and try to locate if classname is unique
+        // if webelement also has classname attribute but it is not unique so it is not good idea to use.
+// if id is dynamic means (when you refresh page and if you see id is changing that means is dynamic) it wont be usefull.
+
+6-tagNAme
+--you locate using tagname itself
+--the usage of this one not too much
+--it is good if you want to print same tag names
+for ex : if you wanna print all links in the page then you will use this method
+driver.findElements(By.tagName(a))
+driver.findElements(By.tagName(div))
+
+getText()
+-- this one will be getting the text of given webelemnt
+-- it is returning you the text of element as a String
+<a id="ert" href="www.amazon.com">Amazon</a>
+get text method will return you Amazon.
+
+/////difference between getText and getAttribute is getText gives you text of element but
+////getAttribute gives you value of atrribute
+
+getAttribute("atrribute name")
+<a id="ert" href="www.amazon.com">Amazon</a>
+getAttribute("id")
+this one will print you ert
+
+Utilities Pakage
+//what type of utulities that you prefer to create ????//////////
+//setup driver, propeerties, sleep methods
+The reason of using utilities:
+ 1.to make our code more reusable
+ 2.easy to maintance
+ (in the future if you wanna change something instead of going each class you will only change from utilities)
+ 3.Reduce typing of same codes over and over
+
+ 7-cssSelector
+ it has own syntax
+ common methods that you can use for css
+ 1- tagname[attribute='value']
+ 2- tagname.value --> . means in css locater className
+ 3-tagname#value # means id in css
+ --you can also go from parent to child
+ div[class='er4g'] > a
+ 8-xpath
+ 2 type xpath : Absulate and Relative
+        1-Absuluate Xpath
+        -start with /
+        -you need to start top parent (begning of html code)
+        -it is not usefull becasuse it takes from very top from to child
+        html
+            head
+            body
+                div
+                div
+                    div
+                        a
+                    div
+                div
+                div
+            body
+            head
+        html
+        for ex : /html/body/div/div/a
+                 /html/body/div
+        if you have siblings you can use [number]. it will pick the siblings for you
+                         /html/body/div[2]
+2-relative xpath
+-- starts with //
+-- double // allows you to locate your webelemt from anyehere in html code.
+--more usefull wehn we compare for absulate xpath because you can start anywhere in html code
+some syntax of using relative xpath
+1-//tagname[@attribute='value']-- looks for tagname attribute and value
+2-//tagname[contains(@attribute, 'value') --locate webelemnt  with the given value if contains
+3-//tagname[.='text'] --looks for exact text match for any attribute
+ex :
+        <div class="est">
+            <a class "def" href="www.gooogle.com">
+         div
+         tagname div
+         attribute class
+         attribute value est
+Next Topics
+Review Locaters
+Css
+Xpath
+find elements
+Checkbox
+----------------------DAY4 NOTES----------------------------------
+Impilicit wait
+--An impilict wait is tell webdriver to pool the html code for a certain amount of time
+when you trying to findelement
+--if page is loaded imedillty it wont wait up to given second.
+--type of selenium waits
+findElements() method
+•This method is used to find more than one webElement
+•Return type:List <WebElement>
+•If it cannot find a webElement:
+•Does NOT throw exception.
+•Only returns an empty list.
+How do we go from parent to child using xpath?
+    -->ex:   Locating anchor tag by its parent using xpath.
+    //div[@id='hello'] --> this is locating the div
+    //div[@id='hello']/a --> this is now locating the anchor tag using its parent
+How do we go from CHILD TO PARENT using xpath?
+    - When we want to go from child to parent: /..
+    //a[@class='ghju']/..  this will locate the parent of a tag
+    //xpath has abilty to go from child to parent
+    //to be able to go from child to parrent you will need to use /..
+" Selenium Methods:
+-getTitle()
+-navigate()
+-getText()
+-sendKeys()
+-getCurrentUrl()
+-getAttribute()
+-getPageSource()
+-getClass()
+-findElement(By, by)
+-click()
+-findElements(By, by)
+-isEnabled()
+-close() and quit()"
+-isDisplayed()
+isSelected()
+----------------------DAY5 NOTES----------------------------------
+What is TestNG?
+    -> TestNG is a unit testing tool that allows us create flow using Annotations.
+    -> First we create methods, then we use TestNG annotations to create running flow.
+        - We decide which method is test by typing @Test
+        - Which method runs before tests
+        - Which method runs after tests ...
+    -> Annotations are a way of controlling the flow of the test.
+    @Test annotation:
+    -> Which allows us to run those methods(tests) without main method.
+    @BeforeMethod:
+    -> Makes the annotated method run before each @Test method.
+    -> Usually used for setting up conditions, getting browsers, and pages.
+        driver.get("");
+        -maximize
+        -implicit wait
+    @AfterMethod:
+    -> After method makes the method run AFTER each @Test method.
+    -> Usually used to close things down such as closing the browser
+    @BeforeClass:
+    -> BeforeClass makes the annotated method run ONCE before all of test, beforemethod in the class.
+    -> Used for setting up environments, opening browsers etc.
+    @AfterClass:
+    -> After class makes the annotated method run once after the tests in the class.
+
+!!!!NOTE ===  If you are copy pasting from my code make sure to import from correct dependecy which is testNG option
+
+ASSERTIONS:
+    -> Assertions are coming from TestNG
+    -> Assertions allows us to do our verification for our test cases
+    -> You can pass an additional argument into assertion methods just to provide additional information about what failed.
+            // to be able to print on the console
+--> assertEquals :
+        - This method expected two arguments to be passed: actual, expected.
+        - It compares these two values and if they are exact match, it will pass.
+--> assertTrue :
+        - This method expects you to pass a boolean value. Or you have to pass a method that returns a boolean value.
+        - If the boolean value is TRUE, it will pass. If not it will fail.
+--> assertFalse :
+        - This method expects you to pass a boolean value.
+        - If the boolean value is FALSE, IT WILL PASS. If not, it will fail.
+--> If you assertion fails, it will stop running for the current test in the same line where it failed.
+It will move to the next test. And start running that one.
+How to ignore a test?
+1- Add @Ignore on top of the test.
+In what order the tests are running if we have multiple tests?
+    -> By default tests are running in alphabetical order. (Case sensitive capitals come first)
+    priority => You can change the running order using priority.
+     - We can change the priority which will change the running order of the tests
+=======================
+
+How do we handle dropdowns using Selenium?
+HOW MANY TYPES OF DROPDOWN ARE THERE?
+1- Select dropdowns: are created by using <select> tag in HTML
+    <select>
+        <option value="1"> option1 </option>
+        <option value="2"> option2 </option>
+        <option value="3"> option3 </option>
+    </select>
+--use select class to locate them.
+by value,index and text
+2- HTML dropdowns: these are the dropdowns that are created NOT USING <select>
+    - These dropdowns are handled just like any other webElement you will see on the page.
+
+----------------------DAY6 NOTES----------------------------------
+web tables in HTML?
+
+tr --> stands for table row
+<td> stands for table data
+<th> --> stands for table header. just makes things centered and bold.
+<table>
+    <thead>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+How do we handle web tables using Selenium webdriver?
+    -> We create specific xpath locators to locate what we want to get from the table itself.
+How do we handle web tables?
+    - By creating custom locators to get whatever I need to get from the table.
+    -> If I need to get the whole row, I create a locator that returns me the whole row.
+    -> If I need to get 1 single cell, I need to create a locator that returns me 1 single cell.
+//table[@id='ctl00_MainContent_orderGrid']/tbody/tr
+//table[@id='ctl00_MainContent_orderGrid']//tr
+
+ALERTS
+    There are two types of alerts.
+    1- HTML Alerts:
+        -> How do we handle: We just locate just as another web element on the page.
+        -> Then we click.
+    2- JavaScript Alerts:
+        --prompt,confirm box ,alert box
+
+    HOW DO WE HANDLE ALERTS?
+        -> Using Alerts.
+        -> JS alerts are not part of the HTML structure. Therefore we need to switch the driver focus to the alert itself.
+        1- Create an instance of Alert, then switch to alert.
+                Alert alert = driver.switchTo().alert();
+        2-  to accept, dismiss
+            alert.accept();
+            alert.dismiss();
+IFRAMES
+
+-> Iframes are basically <html> inside of another <html>
+-> Selenium can only focus one thing at a time.
+So we need to SWITCH driver's focus to the inner iframe to be able to perform any action with Selenium.
+-> There are 3 ways to switch to iframes
+
+	1- Locating as WebElement then using that webElement to switch.
+	WebElement iframe = driver.findElement(LOCATOR);
+	driver.switchTo.frame(iframe);
+
+	2- Switching by index. We pass the index number of the frame.
+	-> if you have more than one iframe on the page, indexes are used.
+	<iframe> --> index 0
+	<iframe> --> index 1
+	<iframe> --> index 2
+
+	driver.switchTo.frame(0);
+
+	3- Switching by id or name attribute value.
+	driver.switchTo.frame("idValue");
+	driver.switchTo.frame("nameValue");
+
+
+Questions :
+
+1. Why are you using Selenium ? (What is the advantage of using Selenium)
+-Multiple Language such as: Java, C#, Python, Ruby, JS...
+-Multiple Browsers
+-Open source (its free)
+-different operation systems (OS), such as: Mac, Windows, Linux.
+
+2.What is the webelement ?
+- Everything that you see on the page is a web element
+- such as links,buttons,input boxes, checkbox ,images etc.
+
+3.how many locaters
+--8 locaters we have
+
+4 What happens when findElement method cannot locate a webElement?
+ 	-> It throws NoSuchElementException
+
+5. What is return type of findElement method
+-- WebElement
+
+6.WHAT IS MAVEN? Why we use maven project ?
+--maven is a built automation tool
+--it help us to create our automatin framework with some librarries
+-- it has pom.xml
+    (pom.xml is helpingg us to get dependcy outside (libraarry : ready methods ))
+
+7. Differences of Thread.Sleep impilict wait
+-- thread.sleep will wait until given time and its going to stop excution
+-- impilicit wait will wait until page got loadded -- it wont wait until given time
+
+8.HOW DO WE HANDLE CHECKBOXES AND RADIO BUTTONS USING SELENIUM?
+-- we need to locate them and then you can also click
+//to check their funcnality
+    --isSeleceted or isEnabled method will help you .
+
+9.How do we handle dynamic web elements?
+-- if the webelement attribute value are changing when you refreshing page that means your webelemeny is dynamic
+-- custom methods xpath method will help you to handle this issue.
+
+syntax: Custom Methods
+		//div[contains(@attribute, ‘value’)] -- use static part of the value
+		//div[starts-with(@attribute, ‘value’)]
+		//div[ends-with(@attribute, ‘value’)]
+
+id=hello25 -- dynamic element
+refresh page
+id=hello37 -- dynamic element
+refresh page
+id=hello94 -- dynamic element
+
+//div[contains(@id, ‘hello’)]
+
+10. Differences Css and Xpath
+-- Xpath has custom methods but css doesnt have those
+-- Xpath has abilty to go from child to parrent and parent to child
+-- but in css you can only go from parent to child
+-- css it works little faster then Xpath
+--
+----------------------DAY7 NOTES----------------------------------
+WINDOWS/TABS
+	-> Selenium can only focus on one thing at a time.
+	-> Selenium creates something called window handle for each tab or window.
+	-> For selenium, there is no difference between a tab, and a window. It works same for both of the tab and window.
+
+	What is a window handle : Randomly generated string that is unique to each window.
+	example : CDwindow-7E6F9AEE107F13A24BF541182AEE2971
+
+	How to get current window handle?
+		-> driver.getWindowHandle() --> will store current window that you are working for one window.
+
+	How to get all of the window handles of the currenly opened tabs/windows?
+		-> driver.getWindowHandles() --> will return a SET of string that contains all the windows or tabs that you have.
+
+
+Using Intelije Git Tools :
+After creating your repository in remote repository (github) and connecting with your local repositery (your local intelije)
+You will see Git extantions on top right of intelije as a 3 icon.
+Blue arrow is git pull.
+yellow arrow is git push.
+greeen tick is git commit.
+I will also add screenshot in the selenium channel
+
+configuration.properties
+//you will need to store impartant data
+//also changable datas
+//common use for store paths or enviroment details etc.
+----------------------DAY8 NOTES----------------------------------
+
+-What is hardcoding?
+    -harcoding means passing every data inside of class without using any utils or files
+	-> if you hard code, to be able to change the test data
+	you have to go to each test and change the data from there.
+
+-Data Driven Testing is running the same test against different datas.
+	- instead of hardcoding tes data inside of test
+	- We created a properties file and we keep our test data in the file.
+    --DataProvider Annotation
+
+PropertiesReading utility class
+	-> to be able to read from .properties type of file, we created util class.
+	-> steps to read from properties file:
+		1- Creating the object from Properties class
+		Properties properties = new Properties();
+		2- We need to OPEN the file in
+			FileInputStream file = new FileInputStream("path");
+		3- We need to load the file to properties object.
+			properties.load(file);
+		4- We close the previously opened file
+			file.close();
+//by hiding properties object and getting this object in the getter method is
+basically an example of encapsulation
+
+--> JavaScriptExecutor :
+    for some actions that selenium that able to handle
+
+	-JavaScriptExecutor is an Interface that helps to execute JavaScript through Selenium Webdriver.
+	-JavaScriptExecutor provides two methods "executescript" & "executeAsyncScript"
+	to run javascript on the selected window or current page.
+	-This method executes JavaScript in the context of the currently selected frame or window in Selenium.
+
+	JavaScriptExecutor:
+	//not always but sometimes if your seleniuma and action class are not able to do action,
+	you can always think JavaScriptExecutor
+
+	1- We create javascriptExecutor object and we cast our WebDriver type instance into JavascriptExecutor type.
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+
+    2- Then we have access to the methods that are coming from JavascriptExecutor interface.
+    js.executeScript(Script,Arguments);
+
+    For arguments scrooldown , click ,window.open etc..
+    -- you will prefer to use when you are not able to do some actions with selenium
+
+Scroll in Selenium?
+     -with selenium itself you are not able to scrooll in the page you need :
+ 	1-JSExecutor
+
+
+
+DRIVER UTILITY
+
+- initialize the driver without coding too many line for each class
+- Being able to pass the same driver instance when calling methods from other classes
+
+Singleton Design pattern in DriverUtil:
+	-> We create a private constructor, and we also create a getter method
+	to allow users to create the instance of this class from getter.
+    -> You cannot create an object of that class because you made Priavete Constractor
+    --there will be always one instance of driver with singleton design pattern
+    --achive our gol from one instance
+
+Example : https://www.tutorialspoint.com/design_pattern/singleton_pattern.htm
+
+--> Headless browser: The only difference between regular browser,
+headles-browser is: headless ones does not get open in the machine.
+--headles one will excute your code faster.
+
+
+ACTIONS: for mouse action adn some keyword actions
+perform sayesinde action gerceklesir
+Actions class is a collection of individual Action that you want to perform.
+	-> Actions class allows us to handle mouse and keyboard actions on the web pages.
+	    For Example :
+		-> hover over : moveToElement
+		-> right click: contextClick
+		-> dragAndDrop: allows us to drag and drop a web element
+		-> clickAndHold: clicks onto something and waits for next command
+		-> release :
+
+		1- To get Actions methods, we need to create the instance of the actions class.
+		2- And pass the driver instance into the constructor.
+		3- We must use : perform() method at the end to be able to perform any actions method.
+
+----------------------DAY9 NOTES----------------------------------
+Page object model design pattern:
+
+Page Object Model (POM) is a design pattern, popularly used in test automation
+that creates Object Repository for web UI elements. (user interface whihc is what you see on the webpage)
+The advantage of the model is that it reduces code duplication and improves test maintenance.
+
+-Under this model, for each web page in the application, there should be a Page Class.
+-This Page class will identify the WebElements of that web page and
+-also contains Page methods which perform steps with those WebElements.
+-Name of these methods should be given as per the task they are performing,
+-i.e., if a loading the page,  class name will be login page ,POM method name can be login()
+
+IN POM Design you need to have some structure for each page :  to be able to design your POM couple thing that you need to do
+1-/use this method: .PageFactory.initElements(driver, this);
+2-use this annotation: @FindBy
+3-create your webElements
+
+1.PageFactory.initElements(driver, this);  //use this method
+		-> It creates connection in between driver and object of the class.
+2. @FindBy annotation to locate webElements.
+		-> Using this FindBy annotation, help us to locate web elements.
+3. Create methods related webelements
+
+Why Page Object Model?  (REUSABLE, READABLE and MAINTAINABLE. )
+-In the future, if there is a change in the web element,
+  you need to make the change in just one class file and not 10 different scripts.
+-That is achieved with POM and it makes code REUSABLE, READABLE and MAINTAINABLE.
+
+-For Example, In the home page of the web application,
+I have a menu bar which leads to different modules with different features.
+While performing automation testing, many test cases would be clicking through these menu buttons to execute specific tests.
+Now assume that the User Interface is CHANGED and all the menu buttons are relocated to a different position in the home page.
+So, this will result in automation tests to fail. Automated test cases will fail as scripts will not be able to find particular element-locators to perform an action.
+Now, QA Engineer needs to walk through the whole code to update locators where necessary.
+CHANGING the element-locators in the duplicated code will consume a lot of time to only adjust locators.
+ -Here, you can save this time by using the Page Object Model in our test automation framework.
+
+
+ // we dont want to store any locater inside utilities
+ //on the utilities you will store more generic commen methods that you might use  such as driver browser utils
+
+
+----------------------DAY10 NOTES----------------------------------
+
+ //to be able to do scroll down
+        //you have 2 option
+            //1.actions move to the element
+        //need to create an object from actions
+        Actions actions=new Actions(DriverUtil.getDriver());
+        actions.moveToElement(ifreme).perform();
+
+            //2.JS excuter
+
+        JavascriptExecutor javascriptExecutor=(JavascriptExecutor) DriverUtil.getDriver();
+        //to make jsexecuter works you need to do casting between driver and jsexcuter
+
+        BrowserUtils.wait(3);
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView(true);",ifreme);
+
+
+Either for actions or jsexcuter first you need to create connection the place that they are going to work which is driver
+    in actions class created with constracturor and it has webdriver so you can pass
+            Actions actions=new Actions(DriverUtil.getDriver());
+
+   in jsexcuter since it has no constractor to make jsexcuter to understand where is going to be connect which is driver
+   //you need to cast with driver
+           JavascriptExecutor javascriptExecutor=(JavascriptExecutor) DriverUtil.getDriver();
+
+
+
+WEBDRIVERWAIT CLASS (Explicit Wait) Total 20
+	-> We use explicit wait If we are waiting for some specific webelement or action to happen.
+	- This will wait upto given seconds like implicit wait.(if condition happens on the third second wait will wait for 3 second)
+	(it wont wait whole time to get finish it will only wait until condition gets true)
+	- After 20 It will throw TimeOutException if condition not happens
+explicit ve implicit'i ayni anda kullanabilirsin bunda bir sorun olmaz
+implicit: page loading any times tryes to find web element
+explicit: specficly one webelement that you are using adn for specific condition
+
+
+
+Examples :
+alertIsPresent()
+elementSelectionStateToBe()
+elementToBeClickable()
+elementToBeSelected()
+frameToBeAvaliableAndSwitchToIt()
+invisibilityOfTheElementLocated()
+invisibilityOfElementWithText()
+presenceOfAllElementsLocatedBy()
+presenceOfElementLocated()
+textToBePresentInElement()
+textToBePresentInElementLocated()
+textToBePresentInElementValue()
+titleIs()
+titleContains()
+visibilityOf()
+visibilityOfAllElements()
+visibilityOfAllElementsLocatedBy()
+visibilityOfElementLocated()
+
+
+
+What Is TestNG.Xml?
+TestNG.xml file is a configuration file that helps in organizing our tests.
+It allows testers to create and handle multiple test classes, define test suites and tests.
+
+It makes a tester’s job easier by controlling the execution of tests by putting all the test cases together
+and run it under one XML file. This is a beautiful concept, without which, it is difficult to work in TestNG.
+
+Advantages Of TestNG.xml
+Major advantages of TestNG.xml file are:
+
+It provides parallel execution of test methods.
+It allows the dependency of one test method on another test method.
+It helps in prioritizing our test methods.
+It allows grouping of test methods into test groups.
+It has different types of HTML reports, Extent reports, etc. for a better and clear understanding of our test summary.
+It has listeners who help in creating logs.
+
+Concepts Used In TestNG.xml
+#1) A Suite is represented by one XML file. It can contain one or more tests and is defined by the <suite> tag.
+
+Example: <suite name=”Testing Google Apps”>
+
+#2) A Test is represented by <test> and can contain one or more TestNG classes.
+
+Example: <test name=”Regression”>
+
+#3) A Class is a Java class that contains TestNG annotations. Here it is represented by the <class> tag and can contain one or more test methods.
+
+Example
+
+<classes>
+<class name="Googletest.GmailTest"/>
+<class name="Googletest.MapsTest"/>
+<class name="Googletest.ImagesTest"/>
+</classes>
+
+
+

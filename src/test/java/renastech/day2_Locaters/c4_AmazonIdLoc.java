@@ -61,6 +61,12 @@ syntax : driver.findElement(By.id("id attribute value"));
 
         //        //4.then click on search button
         Thread.sleep(1000);
+        //********interviewda sorarlarsa implicit ve explicit best option to use,
+        //thread.sleep we dont suggest it de
+        //ama real work'de zaten kullaniyorsun
+
+
+
         driver.findElement(By.id("nav-search-submit-button")).click(); //bu isim, arama butonunun yanida cikan mercek oluyor
         //yukaridaki yazi arama kutusunun icine yazildi, hemen yukaridaki de click yapmayi sagladi
 

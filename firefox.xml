@@ -1,0 +1,14 @@
+
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Smoke Firefox">
+    <test name="Smoke module day 8 firefox ">
+        <classes>
+            <class name="renastech.day8_properties_JSexec.c1_SmartBearPractice"></class>
+            <class name="renastech.day8_properties_JSexec.c4_AllertPractice"></class>
+        </classes>
+    </test>
+    
+    
+</suite>
+
