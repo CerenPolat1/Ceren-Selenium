@@ -22,7 +22,7 @@ public class LinkedInLoginPage extends BasePage{
 
     public void loginLinkedIn(String userName, String password){
 
-        userNameBox.sendKeys(userName); //variable'i iceri cagiriyoruz, interitance'i dusun, this() kullanmadik cunku isimleri farkli
+        userNameBox.sendKeys(userName); //variable'i iceri cagiriyoruz,
         passwordBox.sendKeys(password);
         loginButtton.click();
     }

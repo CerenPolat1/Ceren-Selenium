@@ -42,6 +42,9 @@ public class c7_AppleFindElements {
         //cunku a'da link oldugundan onu seciyoruz a demek href demek o yuzden.baska bir nedeni yok
         //body'nin icinde yer alan link'e ulasmak icin a'ya gidiyoruz cunku a=href demek
 
+
+        //neden arraylist yerine list kullaniyoruz cunku array just accept objects ***********************
+
         int linkWithText=0; //to count elements that has text
         int linkwithoutText=0; //to count elements that doenst have text
 

@@ -30,7 +30,7 @@ Configuration File :
     @Test
     public void TC1_loginLinkedIn(){
 
-        DriverUtil.getDriver().get(PropertiesReadingUtil.getProperties("LinkedIn_url"));
+       DriverUtil.getDriver().get(PropertiesReadingUtil.getProperties("LinkedIn_url"));
 
         linkedInLoginPage=new LinkedInLoginPage();
 

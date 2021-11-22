@@ -64,6 +64,7 @@ syntax : driver.findElement(By.id("id attribute value"));
         //********interviewda sorarlarsa implicit ve explicit best option to use,
         //thread.sleep we dont suggest it de
         //ama real work'de zaten kullaniyorsun
+        //
 
 
 

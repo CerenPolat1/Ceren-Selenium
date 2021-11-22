@@ -27,6 +27,9 @@ public class c2_explicitwaitExample {
       It is an intelligent kind of wait, but it can be applied only for specified elements.
       */
 
+
+    //implicit komple etkiliyo,
+    //explicit sadece expectecd conditionslarda kullaniyoruz yani sadece bir webelement icin dusun
     @Test
     public void Tc1_impcilitWait(){
         DriverUtil.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

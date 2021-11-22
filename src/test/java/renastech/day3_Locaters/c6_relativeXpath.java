@@ -52,3 +52,33 @@ public class c6_relativeXpath {
 //--Xpath has ability to go from child to parent and parent to child
 //--but in Css, you can only go from parent to child
 //--Css works little faster than Xpath.
+
+
+/*
+hangi durumlarda and ve or kullaniyoruz xpath'de???
+
+ tam nokta atisi yapmak istedigimizde mesela diyelim bir tane locate belirledir
+ ama aynisindan baska bi yerde de var biz oraya and ya da or ekliyoruz
+  ayni tag da olan bir attribute u da xpathle yaziyoruz yani tam nokta atisi gibi dusun
+  kacirma ihtimali yok tam garantiliyoruz
+
+ */
+
+
+/*
+ tag name yerine //*[...... seklinde de kullanabiliyomussun
+
+yani tag name yerine * da koyabilirsin
+
+ayrica:
+mesela tum linkleri store etmek istiiyosun diyelim sayfadaki linklar a taginin icinde oluyo.
+//a yazarak linkleri store edebilirsin
+
+ */
+
+/*
+select'i dropdownlar icin kullaniyoruz birde bak orada dropdowna tikladiginda
+ option 1 ve 2 varya onlara sag click yapmak istedigin zaman olmuyo yapamiyosun
+ o yuzden select kullaniyoruz
+ o option 1 veya option 2 yi de secebilmek icin de  dropdown.selectByVisibleText("Option 2"); bu sekilde yaziyoruz
+ */
