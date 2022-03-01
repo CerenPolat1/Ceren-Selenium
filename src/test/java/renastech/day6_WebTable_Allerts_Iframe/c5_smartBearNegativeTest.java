@@ -47,6 +47,7 @@ public class c5_smartBearNegativeTest {
         //6- verify error message displayed :Invalid Login or Password.
         WebElement errorMessage = driver.findElement(By.className("error"));
         Assert.assertTrue(errorMessage.isDisplayed());
+
     }
 
     //diyelim positive olarak testlerin gecti bir de negatif olarak bakmak istiyorsun tek tek test olusturmak yerine

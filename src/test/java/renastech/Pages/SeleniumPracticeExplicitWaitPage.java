@@ -3,6 +3,7 @@ package renastech.Pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SeleniumPracticeExplicitWaitPage extends BasePage {
 
@@ -20,6 +21,7 @@ public class SeleniumPracticeExplicitWaitPage extends BasePage {
         //timerButton.click();
         webDriverWait.until(ExpectedConditions.elementToBeClickable(timerButton)).click();
         //webdriverwait base class'dan geliyor
+
     }
 
     public void getDefaultText(){
@@ -31,5 +33,6 @@ public class SeleniumPracticeExplicitWaitPage extends BasePage {
 //        System.out.println("webDriverText.getText() = " + webDriverText.getText());
         return webDriverText;
     }
+
 
 }

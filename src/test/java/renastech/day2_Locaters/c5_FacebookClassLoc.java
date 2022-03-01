@@ -50,7 +50,7 @@ syntax : driver.findElement(By.className("class attribute value"));
             System.out.println("actualHeader = " + actualHeader);
         }
 
-        driver.close();
+       //driver.close();
 
     }
 }

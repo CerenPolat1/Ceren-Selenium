@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class c3_GmailLinkPartialLoc {
 
    /* 2.Linktext (equals the text)
+
 --this locater allows us to locate links by their text
 --this locater will only works if webelement has links
     How do i understand if the webelement has links ?
@@ -59,6 +60,6 @@ for windows ctrl+F
             System.out.println("actualTitle = " + actualTitle);
         }
 
-        driver.close();
+        //driver.close();
     }
 }

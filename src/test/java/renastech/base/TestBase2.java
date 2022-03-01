@@ -9,6 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class TestBase2 {//abstraction example
     //it has the same purpose with your first TestBase
+    //neden abstruct olarak olusturduk? sadece gosterme amacli zaten her sekilde extend yaptigimizdan bu classlari
+    //sadece bundan da yapilabildigini bilmek icin ozel bi nedeni yok
     @BeforeMethod
     public void setup(){
 

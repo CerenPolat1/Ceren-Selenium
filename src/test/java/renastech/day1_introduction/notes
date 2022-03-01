@@ -1,4 +1,18 @@
 
+
+TestNG icin dependency'ler:
+1-bonigarcia/webdrivermanager :5.0.3</version>
+2-selenium-java :3.141.59</version>
+3-testng: 7.4.0</version>
+4-javafaker: 1.0.2</version> ----kullanacaksan ekliyorsun, yukaridakiler zaruri
+
+property:maven-> 1.8 version
+
+
+
+
+
+
 note class'i olusturmak:
 notes klasorunu koymak istedigin package'e sag click yaptin olutrdun ama eger olusmadiysa
 olusturdugun ama duzgun calismayan note class'ina sag tikla sonra override file type tikla sonra textmate'i sec bu kadar
@@ -19,10 +33,11 @@ Pom.xml
 
 -To be able to do any action on web element  we need to locate that web element with selenium Webdriver.
 -We are going to use findElement(By.locater)
+
 findElement(By.locater)
     -this method will return a single webelement
     -return type is webelement
-    -it is going to trow NosuchElementExeption if it cant find it.
+    -it is going to throw NosuchElementExeption if it cant find it.
 
 Locater
 -We have 8 locaters in selenium

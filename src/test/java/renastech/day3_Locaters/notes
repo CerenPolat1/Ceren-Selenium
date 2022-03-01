@@ -77,7 +77,7 @@ The reason of using utilities:
 some syntax of using relative xpath
 
 1-//tagname[@attribute='value']-- looks for tagname attribute and value
-2-//tagname[contains(@attribute, 'value') --locate webelemnt  with the given value if contains
+2-//tagname[contains(@attribute, 'value')] --locate webelemnt  with the given value if contains
 dynamic id usually has static part and dynamic part
 exp:
 id = hello123

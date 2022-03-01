@@ -53,17 +53,25 @@ bonigarcia ne ise yarar? ve nedir
 bonigarsia bir dependencydir. bonigarcia provides connection between selenium and browser
 nerededir?
 pom.xml file icindedir
-pom.xml file, maven'in icindedir, maven olmazsa pom da olmaz
+pom.xml file, maven'in icindedir, maven olmazsa pom da olmaz.it consist dependencies. it provides running code
 
-what kinda tool is in the selenium?
+What is apache???
+-Apache is a server.
+ it is an open source software
+ It runs on 67% of all webservers in the world.
+  It is fast, reliable, and secure.
+
+
+
+what kinda tools is in the selenium?
 java and maven
-what is maven?
+what is maven? a build automation tool
 maven is a build, you just install your framework and you can use it
 
 selnium-java is also important and it is also dependency
 
 do you have cross funtional testing?
-chromdayken firefoxa gecmek gibi
+chromdayken firefoxa gecmek gibi, yes.
 
 
 

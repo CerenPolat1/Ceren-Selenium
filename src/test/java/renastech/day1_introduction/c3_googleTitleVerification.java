@@ -40,6 +40,9 @@ public class c3_googleTitleVerification {
             //or:fail verdi ama neden? gibi, actualtitle o yuzden printe koyduk
         }
 
+        //if you have an issue in if else conditon in selenium, your code will work without any problem
+        // but if you have an issue in assert,your test gives error and stop running
+
 
         driver.close();
     }

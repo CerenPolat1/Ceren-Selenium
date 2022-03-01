@@ -8,6 +8,7 @@
             <class name="renastech.day9_Actions_POM.c4_smartBearPOMExample"></class>
             <class name="renastech.day6_WebTable_Allerts_Iframe.c3_Alerts"></class>
             <class name="renastech.day7_Windows_Tabs_Properties.c1_WebTablePractice"></class>
+
         </classes>
     </test>
 </suite>

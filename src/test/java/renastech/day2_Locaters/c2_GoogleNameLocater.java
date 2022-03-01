@@ -92,7 +92,7 @@ public class c2_GoogleNameLocater {
             System.out.println("actualTitle = " + actualTitle2);
         }
 
-        driver.close();
+        //driver.close();
 
 
     }

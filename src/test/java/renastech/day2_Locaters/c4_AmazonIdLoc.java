@@ -13,7 +13,7 @@ public class c4_AmazonIdLoc {
 
     /*
     4.id
-    id is not always unique ******
+    id is  always unique ******
 --id will locate by matching id attribute's value.
 --id is unique for the specific webElement
 --if you have id and it is not dynamic you should always use id .

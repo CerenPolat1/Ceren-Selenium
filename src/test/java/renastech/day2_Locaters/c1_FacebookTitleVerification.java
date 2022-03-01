@@ -26,7 +26,7 @@ public class c1_FacebookTitleVerification {
         //Go to https://www.facebook.com
         driver.get("https://www.facebook.com");
 
-        String expectedTitle="Facebook - Log In or Sign Up"; //sayfayi actiginds link kisminda cikar
+        String expectedTitle="Facebook - Log In or Sign Up"; //sayfayi actiginda link kisminda cikar
         String actualTitle=driver.getTitle();
 
         if (actualTitle.equals(expectedTitle)){
@@ -36,7 +36,7 @@ public class c1_FacebookTitleVerification {
         }
 
 
-        driver.close();
+        //driver.close();
 
     }
 }

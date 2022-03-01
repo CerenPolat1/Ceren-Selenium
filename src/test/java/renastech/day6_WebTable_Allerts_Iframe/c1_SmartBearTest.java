@@ -42,6 +42,11 @@ public class c1_SmartBearTest {
         //    //3- Login
         SmartBearUtils.loginForSmartBear(driver);
 
+        /*
+        when we see input in html code, ***************************
+        it means we can write something inside box that we locate it********
+         */
+
     }
 
     @Test
@@ -62,6 +67,8 @@ public class c1_SmartBearTest {
         //new Select'e geldigimizde bizden yukarinin icine select webelement yani select dropdown girmemizi istiyor
 
         dropdownProduct.selectByVisibleText("FamilyAlbum");
+
+
 
         WebElement quantity= driver.findElement(By.name("ctl00$MainContent$fmwOrder$txtQuantity")); //quantity'in inspecti
         quantity.sendKeys(Keys.BACK_SPACE);  //bundan once direct sendkeys:5 yazmistik ama

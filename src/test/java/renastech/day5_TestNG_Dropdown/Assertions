@@ -36,7 +36,7 @@ In what order the tests are running if we have multiple tests?
 
 =======================
 
-How do we handle dropdowns using Selenium?  answer is: we need to use select class
+How do we handle dropdowns using Selenium?  answer is: we need to use select class or html
 
 HOW MANY TYPES OF DROPDOWN ARE THERE?
 

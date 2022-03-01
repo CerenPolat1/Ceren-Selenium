@@ -29,7 +29,7 @@ public class c2_GoogleTestNg {
 
     @BeforeMethod
     public void setUp(){
-        //this annotion will apply all of your tests
+        //this annotation will apply all of your tests
         //so its better to use comman steps in here so you dont dublicate steps
 
         driver= WebDriverUtil.getDriver("Chrome");

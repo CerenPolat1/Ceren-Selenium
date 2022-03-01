@@ -25,7 +25,8 @@ public class c7_AppleFindElements {
 // *******driver.findElement(By.xpath("//span[.='iPhone']")).click();//neden click yapmiyor
         //cunku bazilari boyle unclickable olabiliyor ve oyle oldugunda onun bi parentina cik
 
-        driver.findElement(By.xpath("//span[.='iPhone']/..")).click(); //parent
+        driver.findElement(By.cssSelector("//span[.='iPhone']/..")).click(); //parent
+        //a[class='ac-gn-link ac-gn-link-iphone']   bunu da kullanabilirdik
         //parent yapabilmek icin /.. ekliyoruz  ************* bu bizi direkt parenta goturuyor
 
 
@@ -74,7 +75,7 @@ public class c7_AppleFindElements {
         System.out.println("linkWithText = " + linkWithText);
         System.out.println("linkwithoutText = " + linkwithoutText);
         System.out.println("allLinks.size() = " + allLinks.size());
-        driver.close();
+        //driver.close();
 
 //run yaptiginda cikan sayilar degisebilir cunku updateler gelir yeni functionlar eklenir vs. ayrica farkli ulkelerde
         //farkli sayilar cikar, ulkeden ulkeye degisir yani

@@ -12,6 +12,8 @@ public class TestBase {
 
     protected WebDriver driver;  //bu normalde WebDriver driver; idi boyleyken default idi.
     // ama bunu farkli package'den kullanamayacagimizdan protected'a aldik ya da public'e de alabilirdik
+    //default olsaydi farkli package'lardan call edemezdik,
+    //ya public ya da default olurdu zaten her sekilde extend yapacagimizdan pek farketmiyor
 
     @BeforeMethod
     public void setup(){

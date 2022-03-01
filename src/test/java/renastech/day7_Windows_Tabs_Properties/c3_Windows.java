@@ -20,13 +20,14 @@ public class c3_Windows extends TestBase {
         driver.findElement(By.id("WindowsII")).click();
 
         System.out.println("before clicking new window driver.getTitle() = " + driver.getTitle());
-        ////button[@id='open-window']
+        // //button[@id='open-window']
         WebElement openWindowButton=driver.findElement(By.xpath("//button[@id='open-window']"));
         openWindowButton.click();
         //after clicking this line now you have 2 windows
         //and to be able to work on second window
         //change selenium focus on the next window
         System.out.println("after clicking new window driver.getTitle() = " + driver.getTitle());
+          //driver.getWindowHandle();  //SADECE 1 WINDOW ICIN
 
         Set<String> allwindows=driver.getWindowHandles();//to store all windows
 

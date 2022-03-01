@@ -43,4 +43,4 @@ public class c1_implicitWaitExample {
     }
 }
 
-//seleniumTestNG and cucumber Bd have just difference their framework both are IU(user interface) testing
+//seleniumTestNG and cucumber Bdd have just difference their framework both are IU(user interface) testing
